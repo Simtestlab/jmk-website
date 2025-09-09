@@ -1,4 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import windImg from "@/assets/wind_energy.jpg";
+import solarImg from "@/assets/solar_power.jpg";
+import operImg from "@/assets/operatation_maintanace.jpg";
+import itImg from "@/assets/it_solutions.jpg";
 import { Button } from "@/components/ui/button";
 import { Wind, Sun, Settings, Database, Laptop, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -9,37 +13,41 @@ const Services = () => {
       icon: Wind,
       title: "Wind Energy Projects",
       description: "Complete wind farm development, installation, and maintenance services with multi-brand O&M capabilities.",
-      features: ["400MW+ Wind Farms Maintained", "Multi-brand O&M Services", "AMC & COAMSC Provider", "Turbine Installation"]
+      image: windImg,
+      path: "/services/wind-energy"
     },
     {
       icon: Sun,
       title: "Solar Power Projects",
       description: "End-to-end solar solutions from design to commissioning with EPC and turnkey project capabilities.",
-      features: ["100MW+ Completed Projects", "EPC Contractor Services", "Turnkey Solar Solutions", "Grid-tied & Off-grid Systems"]
+      image: solarImg,
+      path: "/services/solar-power"
     },
     {
       icon: Settings,
       title: "Operation & Maintenance",
-      description: "Comprehensive O&M services ensuring optimal performance and maximum uptime for renewable energy assets.",
-      features: ["24/7 Monitoring", "Preventive Maintenance", "Emergency Repairs", "Performance Optimization"]
+  description: "Comprehensive O&M services ensuring optimal performance and maximum uptime for renewable energy assets.",
+  image: operImg,
+      path: "/services/operation-maintenance"
     },
     {
       icon: Laptop,
       title: "IT Solutions",
       description: "Advanced technology solutions for energy management, monitoring, and data analytics.",
-      features: ["SCADA Systems", "Remote Monitoring", "Energy Management Software", "Cloud Solutions"]
+      image: itImg,
+      path: "/services/it-solutions"
     },
     {
       icon: Database,
       title: "Data Analysis",
       description: "Comprehensive data analytics for energy optimization, performance monitoring, and predictive maintenance.",
-      features: ["Performance Analytics", "Predictive Maintenance", "Energy Yield Assessment", "Custom Reporting"]
+      path: "/services/data-analysis"
     },
     {
       icon: Users,
       title: "Social Responsibility",
       description: "Community development initiatives and sustainable practices that benefit local communities.",
-      features: ["Community Development", "Environmental Conservation", "Local Employment", "Educational Programs"]
+      path: "/services/social-responsibility"
     }
   ];
 
@@ -60,11 +68,12 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group">
+            <Card
+              key={index}
+              className={"bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group bg-cover bg-center bg-no-repeat"}
+              style={service.image ? { backgroundImage: `url(${service.image})` } : undefined}
+            >
               <CardHeader>
-                <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="w-8 h-8 text-primary" />
-                </div>
                 <CardTitle className="text-xl font-bold text-foreground">
                   {service.title}
                 </CardTitle>
@@ -73,16 +82,9 @@ const Services = () => {
                 <p className="text-muted-foreground mb-6">
                   {service.description}
                 </p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                
                 <Button variant="energy" size="sm" asChild>
-                  <Link to="/services" className="flex items-center">
+                  <Link to={service.path ?? "/services"} className="flex items-center">
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
