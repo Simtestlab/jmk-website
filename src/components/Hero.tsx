@@ -1,11 +1,47 @@
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Zap, Wind, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
+import home1 from "@/assets/home_01.png";
+import home2 from "@/assets/home_02.png";
+import home3 from "@/assets/home_03.jpg";
 
 const Hero = () => {
+  const images = [home1, home2, home3];
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  // Configurable timings
+  const INTERVAL_MS = 6000; // time each slide is visible
+  const TRANSITION_MS = 1000; // must match Tailwind duration
+
+  useEffect(() => {
+    if (paused) return undefined;
+    const t = setInterval(() => {
+      setIndex((i) => (i + 1) % images.length);
+    }, INTERVAL_MS);
+    return () => clearInterval(t);
+  }, [paused]);
+
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
-      {/* Background Pattern */}
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      {/* Background images (absolute layer) */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {images.map((src, i) => (
+          <div
+            key={i}
+            className={"hero-bg-img absolute inset-0 transition-opacity duration-1000 " + (i === index ? "opacity-100" : "opacity-0")}
+            style={{ backgroundImage: `url(${src})` }}
+          />
+        ))}
+        {/* Gradient overlay to keep brand tint */}
+        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)", opacity: 0.45 }} />
+      </div>
+  {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 animate-pulse">
           <Sun className="w-24 h-24 text-white" />
@@ -72,12 +108,21 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
-        </div>
+      {/* Manual navigation dots */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            aria-label={`Show slide ${i + 1}`}
+            onClick={() => setIndex(i)}
+            className={`w-3 h-3 rounded-full transition-transform duration-200 focus:outline-none ${
+              i === index ? "scale-125 bg-white" : "bg-white/40"
+            }`}
+          />
+        ))}
       </div>
+
+  {/* Scroll indicator removed per request */}
     </section>
   );
 };
