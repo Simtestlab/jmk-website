@@ -12,7 +12,7 @@ const Hero = () => {
   const [paused, setPaused] = useState(false);
 
   // Configurable timings
-  const INTERVAL_MS = 6000; // time each slide is visible
+  const INTERVAL_MS = 3000; // time each slide is visible (3s)
   const TRANSITION_MS = 1000; // must match Tailwind duration
 
   useEffect(() => {
@@ -99,28 +99,12 @@ const Hero = () => {
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-              <Link to="/contact">
-                Get Quote
-              </Link>
-            </Button>
+            {/* Get Quote button removed */}
           </div>
         </div>
       </div>
 
-      {/* Manual navigation dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            aria-label={`Show slide ${i + 1}`}
-            onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full transition-transform duration-200 focus:outline-none ${
-              i === index ? "scale-125 bg-white" : "bg-white/40"
-            }`}
-          />
-        ))}
-      </div>
+  {/* Manual navigation dots removed */}
 
   {/* Scroll indicator removed per request */}
     </section>

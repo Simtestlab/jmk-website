@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,6 @@ const Navigation = () => {
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
-    { name: "Industries", href: "/industries" },
     { name: "Success Stories", href: "/success-stories" },
     { name: "Contact", href: "/contact" },
   ];
@@ -25,10 +25,8 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">JMK</span>
-              </div>
+            <Link to="/" className="flex items-center space-x-3">
+              <img src={logo} alt="JMK Groups" className="w-14 h-14 rounded-lg object-contain" />
               <div className="hidden sm:block">
                 <div className="text-lg font-bold text-foreground">JMK GROUPS</div>
                 <div className="text-xs text-muted-foreground">Energy Solutions</div>
