@@ -3,6 +3,8 @@ import windImg from "@/assets/wind_energy.jpg";
 import solarImg from "@/assets/solar_power.jpg";
 import operImg from "@/assets/operatation_maintanace.jpg";
 import itImg from "@/assets/it_solutions.jpg";
+import dataImg from "@/assets/data_analysis.jpg";
+import socialImg from "@/assets/social_responsibility.jpg";
 import { Button } from "@/components/ui/button";
 import { Wind, Sun, Settings, Database, Laptop, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -33,7 +35,7 @@ const Services = () => {
     {
       icon: Laptop,
       title: "IT Solutions",
-      description: "Advanced technology solutions for energy management, monitoring, and data analytics.",
+      description: "Advanced technology solutions for energy management, monitoring, reportingand data analytics.",
       image: itImg,
       path: "/services/it-solutions"
     },
@@ -41,13 +43,15 @@ const Services = () => {
       icon: Database,
       title: "Data Analysis",
       description: "Comprehensive data analytics for energy optimization, performance monitoring, and predictive maintenance.",
-      path: "/services/data-analysis"
+  image: dataImg,
+  path: "/services/data-analysis"
     },
     {
       icon: Users,
       title: "Social Responsibility",
       description: "Community development initiatives and sustainable practices that benefit local communities.",
-      path: "/services/social-responsibility"
+  image: socialImg,
+  path: "/services/social-responsibility"
     }
   ];
 
@@ -70,26 +74,27 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className={"bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group bg-cover bg-center bg-no-repeat"}
+              className={"relative overflow-hidden bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group bg-cover bg-center bg-no-repeat"}
               style={service.image ? { backgroundImage: `url(${service.image})` } : undefined}
             >
-              <CardHeader>
-                <CardTitle className="text-xl font-bold text-foreground">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-6">
-                  {service.description}
-                </p>
-                
-                <Button variant="energy" size="sm" asChild>
-                  <Link to={service.path ?? "/services"} className="flex items-center">
+              {/* subtle dark blurred overlay so text stays readable (placed behind content) */}
+              <div className="absolute inset-0 bg-black/30 backdrop-blur-sm pointer-events-none z-0" />
+              <div className="relative z-10">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold text-primary-glow">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-white/90 mb-6">
+                    {service.description}
+                  </p>
+                  <Link to={service.path ?? "/services"} className="inline-flex items-center text-white/90 hover:text-white font-semibold">
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
-                </Button>
-              </CardContent>
+                </CardContent>
+              </div>
             </Card>
           ))}
         </div>
