@@ -2,6 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Target, Eye, Heart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import visionImg from "@/assets/vision.png";
+import missionImg from "@/assets/mission.png";
+import valueImg from "@/assets/value.png";
 
 const About = () => {
   return (
@@ -102,8 +105,8 @@ const About = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring">
             <CardContent className="p-8 text-center">
-              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Eye className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-6">
+                <img src={visionImg} alt="Vision" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Vision</h3>
               <p className="text-muted-foreground">
@@ -114,8 +117,8 @@ const About = () => {
 
           <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring">
             <CardContent className="p-8 text-center">
-              <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-6">
+                <img src={missionImg} alt="Mission" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Mission</h3>
               <p className="text-muted-foreground">
@@ -127,8 +130,8 @@ const About = () => {
 
           <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring">
             <CardContent className="p-8 text-center">
-              <div className="bg-primary-glow/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-primary-glow" />
+              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-6">
+                <img src={valueImg} alt="Values" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Values</h3>
               <p className="text-muted-foreground">
