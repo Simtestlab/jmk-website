@@ -99,32 +99,25 @@ const Services = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section (simplified) */}
         <div className="text-center">
-          <Card className="bg-gradient-hero border-0 text-white">
-            <CardContent className="p-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                Ready to Transform Your Energy Future?
-              </h3>
-              <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-                Let our team of experts help you design and implement the perfect 
-                renewable energy solution for your specific requirements.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="lg" asChild>
-                  <Link to="/contact" className="flex items-center">
-                    Get Free Consultation
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-                  <Link to="/projects">
-                    View Our Projects
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="bg-white rounded-lg shadow-md p-10">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900">
+              Ready to Transform Your Energy Future?
+            </h3>
+            <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+              Let our team of experts help you design and implement the perfect renewable energy solution for your specific requirements.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded-md shadow-sm">
+                Get Free Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link to="/projects" className="inline-flex items-center justify-center text-primary font-semibold underline-offset-2 hover:underline">
+                View Our Projects
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
