@@ -17,10 +17,10 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 11% 15%;
 
-  /* Primary brand color sampled from provided image (blue) */
-  --primary: 206 74% 53%;
-  --primary-foreground: 0 0% 98%;
-  --primary-glow: 120 50% 70%;
+    /* Primary brand color sampled from provided image (blue) */
+    --primary: 206 74% 53%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 120 50% 70%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 210 11% 15%;
@@ -28,26 +28,38 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-  --accent: 206 72% 48%;
-  --accent-foreground: 0 0% 98%;
+    --accent: 206 72% 48%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-  --ring: 206 74% 53%;
+    --ring: 206 74% 53%;
 
     --radius: 0.75rem;
 
     /* JMK Energy Design System */
-  --gradient-hero: linear-gradient(135deg, hsl(204 76% 55%) 0%, hsl(218 80% 40%) 100%);
-  --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
-  --gradient-accent: linear-gradient(135deg, hsl(206 74% 62%) 0%, hsl(207 70% 41%) 100%);
-    
-  --shadow-elegant: 0 10px 30px -10px hsl(206 74% 53% / 0.15);
-  --shadow-card: 0 4px 20px -4px hsl(210 11% 15% / 0.1);
-  --shadow-glow: 0 0 40px hsl(206 74% 62% / 0.18);
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(204 76% 55%) 0%,
+      hsl(218 80% 40%) 100%
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(0 0% 100%) 0%,
+      hsl(210 40% 98%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(206 74% 62%) 0%,
+      hsl(207 70% 41%) 100%
+    );
+
+    --shadow-elegant: 0 10px 30px -10px hsl(206 74% 53% / 0.15);
+    --shadow-card: 0 4px 20px -4px hsl(210 11% 15% / 0.1);
+    --shadow-glow: 0 0 40px hsl(206 74% 62% / 0.18);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -79,10 +91,10 @@ All colors MUST be HSL.
     --popover: 210 11% 18%;
     --popover-foreground: 0 0% 98%;
 
-  /* Dark mode primary variants (slightly darker) */
-  --primary: 206 70% 45%;
-  --primary-foreground: 210 11% 15%;
-  --primary-glow: 120 50% 60%;
+    /* Dark mode primary variants (slightly darker) */
+    --primary: 206 70% 45%;
+    --primary-foreground: 210 11% 15%;
+    --primary-glow: 120 50% 60%;
 
     --secondary: 210 11% 25%;
     --secondary-foreground: 0 0% 98%;
@@ -90,24 +102,36 @@ All colors MUST be HSL.
     --muted: 210 11% 25%;
     --muted-foreground: 215 20.2% 65.1%;
 
-  --accent: 206 72% 50%;
-  --accent-foreground: 210 11% 15%;
+    --accent: 206 72% 50%;
+    --accent-foreground: 210 11% 15%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 210 11% 25%;
     --input: 210 11% 25%;
-  --ring: 206 70% 45%;
+    --ring: 206 70% 45%;
 
     /* Dark mode gradients */
-  --gradient-hero: linear-gradient(135deg, hsl(204 70% 45%) 0%, hsl(218 70% 30%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(210 11% 18%) 0%, hsl(210 11% 22%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(206 70% 50%) 0%, hsl(207 70% 30%) 100%);
-    
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(204 70% 45%) 0%,
+      hsl(218 70% 30%) 100%
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(210 11% 18%) 0%,
+      hsl(210 11% 22%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(206 70% 50%) 0%,
+      hsl(207 70% 30%) 100%
+    );
+
     --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.2);
-  --shadow-glow: 0 0 40px hsl(206 70% 50% / 0.2);
+    --shadow-glow: 0 0 40px hsl(206 70% 50% / 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

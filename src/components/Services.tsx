@@ -6,7 +6,15 @@ import itImg from "@/assets/it_solutions.jpg";
 import dataImg from "@/assets/data_analysis.jpg";
 import socialImg from "@/assets/social_responsibility.jpg";
 import { Button } from "@/components/ui/button";
-import { Wind, Sun, Settings, Database, Laptop, Users, ArrowRight } from "lucide-react";
+import {
+  Wind,
+  Sun,
+  Settings,
+  Database,
+  Laptop,
+  Users,
+  ArrowRight,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Services = () => {
@@ -14,45 +22,51 @@ const Services = () => {
     {
       icon: Wind,
       title: "Wind Energy Projects",
-      description: "Complete wind farm development, installation, and maintenance services with multi-brand O&M capabilities.",
+      description:
+        "Complete wind farm development, installation, and maintenance services with multi-brand O&M capabilities.",
       image: windImg,
-      path: "/services/wind-energy"
+      path: "/services/wind-energy",
     },
     {
       icon: Sun,
       title: "Solar Power Projects",
-      description: "End-to-end solar solutions from design to commissioning with EPC and turnkey project capabilities.",
+      description:
+        "End-to-end solar solutions from design to commissioning with EPC and turnkey project capabilities.",
       image: solarImg,
-      path: "/services/solar-power"
+      path: "/services/solar-power",
     },
     {
       icon: Settings,
       title: "Operation & Maintenance",
-  description: "Comprehensive O&M services ensuring optimal performance and maximum uptime for renewable energy assets.",
-  image: operImg,
-      path: "/services/operation-maintenance"
+      description:
+        "Comprehensive O&M services ensuring optimal performance and maximum uptime for renewable energy assets.",
+      image: operImg,
+      path: "/services/operation-maintenance",
     },
     {
       icon: Laptop,
       title: "IT Solutions",
-      description: "Advanced technology solutions for energy management, monitoring, reportingand data analytics.",
+      description:
+        "Advanced technology solutions for energy management, monitoring, reportingand data analytics.",
       image: itImg,
-      path: "/services/it-solutions"
+      path: "/services/it-solutions",
     },
     {
       icon: Database,
       title: "Data Analysis",
-      description: "Comprehensive data analytics for energy optimization, performance monitoring, and predictive maintenance.",
-  image: dataImg,
-  path: "/services/data-analysis"
+      description:
+        "Comprehensive data analytics for energy optimization, performance monitoring, and predictive maintenance.",
+      image: dataImg,
+      path: "/services/data-analysis",
     },
     {
       icon: Users,
       title: "Social Responsibility",
-      description: "Community development initiatives and sustainable practices that benefit local communities.",
-  image: socialImg,
-  path: "/services/social-responsibility"
-    }
+      description:
+        "Community development initiatives and sustainable practices that benefit local communities.",
+      image: socialImg,
+      path: "/services/social-responsibility",
+    },
   ];
 
   return (
@@ -64,8 +78,8 @@ const Services = () => {
             Our Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive renewable energy solutions tailored to meet your specific needs, 
-            backed by decades of expertise and innovation.
+            Comprehensive renewable energy solutions tailored to meet your
+            specific needs, backed by decades of expertise and innovation.
           </p>
         </div>
 
@@ -74,8 +88,14 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className={"relative overflow-hidden bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group bg-cover bg-center bg-no-repeat"}
-              style={service.image ? { backgroundImage: `url(${service.image})` } : undefined}
+              className={
+                "relative overflow-hidden bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group bg-cover bg-center bg-no-repeat"
+              }
+              style={
+                service.image
+                  ? { backgroundImage: `url(${service.image})` }
+                  : undefined
+              }
             >
               {/* subtle dark blurred overlay so text stays readable (placed behind content) */}
               <div className="absolute inset-0 bg-black/30 backdrop-blur-sm pointer-events-none z-0" />
@@ -86,10 +106,11 @@ const Services = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-white/90 mb-6">
-                    {service.description}
-                  </p>
-                  <Link to={service.path ?? "/services"} className="inline-flex items-center text-white/90 hover:text-white font-semibold">
+                  <p className="text-white/90 mb-6">{service.description}</p>
+                  <Link
+                    to={service.path ?? "/services"}
+                    className="inline-flex items-center text-white/90 hover:text-white font-semibold"
+                  >
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
@@ -97,27 +118,6 @@ const Services = () => {
               </div>
             </Card>
           ))}
-        </div>
-
-        {/* CTA Section (simplified) */}
-        <div className="text-center">
-          <div className="bg-white rounded-lg shadow-md p-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900">
-              Ready to Transform Your Energy Future?
-            </h3>
-            <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
-              Let our team of experts help you design and implement the perfect renewable energy solution for your specific requirements.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded-md shadow-sm">
-                Get Free Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link to="/projects" className="inline-flex items-center justify-center text-primary font-semibold underline-offset-2 hover:underline">
-                View Our Projects
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </section>

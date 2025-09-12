@@ -31,10 +31,16 @@ const App = () => (
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/wind-energy" element={<WindEnergy />} />
           <Route path="/services/solar-power" element={<SolarPower />} />
-          <Route path="/services/operation-maintenance" element={<OperationMaintenance />} />
+          <Route
+            path="/services/operation-maintenance"
+            element={<OperationMaintenance />}
+          />
           <Route path="/services/it-solutions" element={<ITSolutions />} />
           <Route path="/services/data-analysis" element={<DataAnalysis />} />
-          <Route path="/services/social-responsibility" element={<SocialResponsibility />} />
+          <Route
+            path="/services/social-responsibility"
+            element={<SocialResponsibility />}
+          />
           <Route path="/projects" element={<Projects />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/contact" element={<Contact />} />

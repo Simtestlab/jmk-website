@@ -7,7 +7,9 @@ const Projects = () => {
       <Navigation />
       <main className="py-12 max-w-6xl mx-auto px-4">
         <h1 className="text-3xl font-bold mb-4">Projects</h1>
-        <p className="text-muted-foreground">This is a placeholder for the Projects listing.</p>
+        <p className="text-muted-foreground">
+          This is a placeholder for the Projects listing.
+        </p>
       </main>
       <Footer />
     </div>
