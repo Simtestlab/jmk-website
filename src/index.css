@@ -20,7 +20,7 @@ All colors MUST be HSL.
   /* Primary brand color sampled from provided image (blue) */
   --primary: 206 74% 53%;
   --primary-foreground: 0 0% 98%;
-  --primary-glow: 206 74% 62%;
+  --primary-glow: 120 50% 70%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 210 11% 15%;
@@ -82,7 +82,7 @@ All colors MUST be HSL.
   /* Dark mode primary variants (slightly darker) */
   --primary: 206 70% 45%;
   --primary-foreground: 210 11% 15%;
-  --primary-glow: 206 74% 55%;
+  --primary-glow: 120 50% 60%;
 
     --secondary: 210 11% 25%;
     --secondary-foreground: 0 0% 98%;
