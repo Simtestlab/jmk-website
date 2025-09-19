@@ -8,7 +8,8 @@ const DataAnalysis = () => {
       <main className="py-12 max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold mb-4">Data Analysis</h1>
         <p className="text-lg text-muted-foreground">
-          Comprehensive data analytics for energy optimization, performance monitoring, and predictive maintenance.
+          Comprehensive data analytics for energy optimization, performance
+          monitoring, and predictive maintenance.
         </p>
       </main>
       <Footer />
