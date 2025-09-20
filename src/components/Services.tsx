@@ -1,11 +1,10 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import windImg from "@/assets/wind_energy.jpg";
 import solarImg from "@/assets/solar_power.jpg";
 import operImg from "@/assets/operatation_maintanace.jpg";
 import itImg from "@/assets/it_solutions.jpg";
 import dataImg from "@/assets/data_analysis.jpg";
 import socialImg from "@/assets/social_responsibility.jpg";
-import { Button } from "@/components/ui/button";
 
 import operationsMaintenanceImg from "@/assets/operations-maintenance.jpg";
 import epcProjectsImg from "@/assets/epc-projects.jpg";
@@ -43,7 +42,11 @@ const Services = () => {
         "Wind power is a proven and powerful way to generate large-scale renewable energy. Capable of producing substantial electricity, wind energy has emerged as a reliable solution for powering industries, businesses, and communities.",
       image: windImg,
       path: "/services/wind-energy",
-      highlights: ["Large-scale renewable energy", "BOOT & CAPS models", "Proven technology"],
+      highlights: [
+        "Large-scale renewable energy",
+        "BOOT & CAPS models",
+        "Proven technology",
+      ],
     },
     {
       icon: Sun,
@@ -52,7 +55,11 @@ const Services = () => {
         "At JMK Groups, we deliver comprehensive solar energy solutions that power businesses, industries, and communities. As a leading EPC partner and project developer, we provide end-to-end services.",
       image: solarImg,
       path: "/services/solar-power",
-      highlights: ["End-to-end EPC services", "Site acquisition to O&M", "Industrial & commercial"],
+      highlights: [
+        "End-to-end EPC services",
+        "Site acquisition to O&M",
+        "Industrial & commercial",
+      ],
     },
     {
       icon: Settings,
@@ -61,7 +68,11 @@ const Services = () => {
         "Comprehensive O&M services designed to ensure optimal performance, maximum uptime, and long-term reliability of your renewable energy assets.",
       image: operImg,
       path: "/services/operation-maintenance",
-      highlights: ["Maximum uptime", "Long-term reliability", "Optimal performance"],
+      highlights: [
+        "Maximum uptime",
+        "Long-term reliability",
+        "Optimal performance",
+      ],
     },
     {
       icon: Laptop,
@@ -70,7 +81,11 @@ const Services = () => {
         "We provide advanced technology solutions for energy management, monitoring, and data analytics, enabling businesses and utilities to optimize performance and improve efficiency.",
       image: itImg,
       path: "/services/it-solutions",
-      highlights: ["Smart monitoring", "Real-time tracking", "Predictive analytics"],
+      highlights: [
+        "Smart monitoring",
+        "Real-time tracking",
+        "Predictive analytics",
+      ],
     },
     {
       icon: TrendingUp,
@@ -79,7 +94,11 @@ const Services = () => {
         "We offer comprehensive data analytics solutions to optimize energy generation, monitor system performance, and enable predictive maintenance for renewable energy assets.",
       image: dataImg,
       path: "/services/data-analysis",
-      highlights: ["Performance optimization", "Predictive maintenance", "Actionable insights"],
+      highlights: [
+        "Performance optimization",
+        "Predictive maintenance",
+        "Actionable insights",
+      ],
     },
     {
       icon: Heart,
@@ -88,7 +107,11 @@ const Services = () => {
         "At JMK Groups, we are committed to community development and sustainable practices that create lasting positive impact in the regions where we operate.",
       image: socialImg,
       path: "/services/social-responsibility",
-      highlights: ["Community development", "Education & healthcare", "Economic growth"],
+      highlights: [
+        "Community development",
+        "Education & healthcare",
+        "Economic growth",
+      ],
     },
   ];
 
@@ -126,7 +149,8 @@ const Services = () => {
     {
       title: "Corporate Solutions",
       image: corporateSolutionsImg,
-      description: "Supplying power to Corporates, Industries, Shopping Malls, Hospitals",
+      description:
+        "Supplying power to Corporates, Industries, Shopping Malls, Hospitals",
       coverage: "Diverse client portfolio across sectors",
     },
   ];
@@ -164,7 +188,9 @@ const Services = () => {
               Our Services
             </Badge>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Comprehensive renewable energy services designed to meet specific client needs, leveraging decades of experience and cutting-edge technology for reliable and efficient outcomes.
+              Comprehensive renewable energy services designed to meet specific
+              client needs, leveraging decades of experience and cutting-edge
+              technology for reliable and efficient outcomes.
             </p>
           </div>
 
@@ -190,7 +216,8 @@ const Services = () => {
               Our Services
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              From renewable energy development to maintenance and data analytics
+              From renewable energy development to maintenance and data
+              analytics
             </p>
           </div>
 
@@ -222,15 +249,6 @@ const Services = () => {
                     {service.description}
                   </p>
 
-                  <div className="space-y-2 mb-4">
-                    {service.highlights.map((highlight, idx) => (
-                      <div key={idx} className="flex items-center text-sm">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground">{highlight}</span>
-                      </div>
-                    ))}
-                  </div>
-
                   <Link
                     to={service.path ?? "/services"}
                     className="inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-colors text-sm sm:text-base"
@@ -253,7 +271,8 @@ const Services = () => {
               Our Core Sectors
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Specialized expertise across wind and solar energy sectors with comprehensive solutions
+              Specialized expertise across wind and solar energy sectors with
+              comprehensive solutions
             </p>
           </div>
 
@@ -265,7 +284,9 @@ const Services = () => {
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
                     <Wind className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">Wind Energy Sector</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                    Wind Energy Sector
+                  </h3>
                 </div>
                 <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-muted-foreground">
                   <div>
@@ -274,9 +295,9 @@ const Services = () => {
                       Annual O&M Security Service Contracts
                     </h4>
                     <p>
-                      Developers conduct extensive wind resource assessments to identify suitable
-                      locations for wind farms. Areas with consistent and strong wind speeds are
-                      preferred.
+                      Developers conduct extensive wind resource assessments to
+                      identify suitable locations for wind farms. Areas with
+                      consistent and strong wind speeds are preferred.
                     </p>
                   </div>
                   <div>
@@ -285,9 +306,10 @@ const Services = () => {
                       Turn Key Projects
                     </h4>
                     <p>
-                      With our expertise gained over 20 years, we will identify the right load and
-                      location, perform micrositing, land deals, Transportation, foundation, Balance of
-                      plants and TANGEDCO powering.
+                      With our expertise gained over 20 years, we will identify
+                      the right load and location, perform micrositing, land
+                      deals, Transportation, foundation, Balance of plants and
+                      TANGEDCO powering.
                     </p>
                   </div>
                   <div>
@@ -296,8 +318,9 @@ const Services = () => {
                       Power Requirements
                     </h4>
                     <p>
-                      We offer consultation mentorship and Govt liaison services right from power
-                      registering to catering power needs between the organizations.
+                      We offer consultation mentorship and Govt liaison services
+                      right from power registering to catering power needs
+                      between the organizations.
                     </p>
                   </div>
                 </div>
@@ -311,7 +334,9 @@ const Services = () => {
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
                     <Sun className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">Solar Energy Sector</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                    Solar Energy Sector
+                  </h3>
                 </div>
                 <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-muted-foreground">
                   <div>
@@ -320,8 +345,9 @@ const Services = () => {
                       Dedicated Solar Energy Wing
                     </h4>
                     <p>
-                      We have end to-end in-house capabilities across all aspects; we follow global
-                      best practices across Products, Process, Technology and Safety.
+                      We have end to-end in-house capabilities across all
+                      aspects; we follow global best practices across Products,
+                      Process, Technology and Safety.
                     </p>
                   </div>
                   <div>
@@ -330,9 +356,9 @@ const Services = () => {
                       Customized Solar Projects
                     </h4>
                     <p>
-                      JMK is committed to developing customized solar Projects for Industrial,
-                      Commercial, and Institutional consumers. We offer each customer an innovative
-                      solution concept.
+                      JMK is committed to developing customized solar Projects
+                      for Industrial, Commercial, and Institutional consumers.
+                      We offer each customer an innovative solution concept.
                     </p>
                   </div>
                   <div>
@@ -341,8 +367,9 @@ const Services = () => {
                       Professional Project Management
                     </h4>
                     <p>
-                      With an experienced Project management team, we follow an exceptionally
-                      professional and systematic approach to all our solar projects.
+                      With an experienced Project management team, we follow an
+                      exceptionally professional and systematic approach to all
+                      our solar projects.
                     </p>
                   </div>
                 </div>
@@ -360,7 +387,8 @@ const Services = () => {
               JMK - THE BRAND
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive renewable energy solutions across multiple business verticals
+              Comprehensive renewable energy solutions across multiple business
+              verticals
             </p>
           </div>
 
@@ -409,30 +437,47 @@ const Services = () => {
                     Pan-India Operations
                   </h3>
                   <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 opacity-90">
-                    Leading renewable energy provider with extensive infrastructure and proven track record
+                    Leading renewable energy provider with extensive
+                    infrastructure and proven track record
                   </p>
                 </div>
                 <div className="bg-white/10 p-4 sm:p-6 lg:p-8 backdrop-blur-sm rounded-lg">
                   <div className="grid grid-cols-2 gap-4 sm:gap-6">
                     <div className="text-center">
                       <Building className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 text-white" />
-                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">100+</div>
-                      <div className="text-xs sm:text-sm text-white/80">Clients Served</div>
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
+                        100+
+                      </div>
+                      <div className="text-xs sm:text-sm text-white/80">
+                        Clients Served
+                      </div>
                     </div>
                     <div className="text-center">
                       <Zap className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 text-white" />
-                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">1000+</div>
-                      <div className="text-xs sm:text-sm text-white/80">MW Capacity</div>
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
+                        1000+
+                      </div>
+                      <div className="text-xs sm:text-sm text-white/80">
+                        MW Capacity
+                      </div>
                     </div>
                     <div className="text-center">
                       <Award className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 text-white" />
-                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">100Cr+</div>
-                      <div className="text-xs sm:text-sm text-white/80">Project Value</div>
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
+                        100Cr+
+                      </div>
+                      <div className="text-xs sm:text-sm text-white/80">
+                        Project Value
+                      </div>
                     </div>
                     <div className="text-center">
                       <Target className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 text-white" />
-                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">Pan</div>
-                      <div className="text-xs sm:text-sm text-white/80">India Reach</div>
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
+                        Pan
+                      </div>
+                      <div className="text-xs sm:text-sm text-white/80">
+                        India Reach
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -453,8 +498,8 @@ const Services = () => {
               </h2>
             </div>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              We have successfully executed projects across multiple locations in Tamil Nadu, India's
-              renewable energy hub.
+              We have successfully executed projects across multiple locations
+              in Tamil Nadu, India's renewable energy hub.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">

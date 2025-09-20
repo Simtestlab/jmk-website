@@ -65,28 +65,28 @@ const About = () => {
     },
   ];
 
-
   const coreValues = [
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "Driving creative solutions for tomorrow's energy challenges"
+      description:
+        "Driving creative solutions for tomorrow's energy challenges",
     },
     {
       icon: Shield,
       title: "Integrity",
-      description: "Conducting business with transparency and ethical values"
+      description: "Conducting business with transparency and ethical values",
     },
     {
       icon: Gem,
       title: "Quality",
-      description: "Delivering excellence in every project and service"
+      description: "Delivering excellence in every project and service",
     },
     {
       icon: Leaf,
       title: "Sustainability",
-      description: "Committed to a greener future for generations"
-    }
+      description: "Committed to a greener future for generations",
+    },
   ];
 
   return (
@@ -98,10 +98,18 @@ const About = () => {
             About JMK GROUPS
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-6">
-            Established in 2010, we've grown from a small seed to a trusted leader in renewable energy solutions across India.
+            Established in 2010, we've grown from a small seed to a trusted
+            leader in renewable energy solutions across India.
           </p>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            With over a decade of industry experience and a proven portfolio of <span className="text-primary font-semibold">500+ MW</span> of clean energy projects, we are recognized for our commitment to innovation, reliability, and customer-focused delivery. Our capabilities cover the complete renewable energy value chain — from consultation, feasibility studies, design, and engineering to procurement, installation, commissioning, and long-term operations & maintenance (O&M).
+            With over a decade of industry experience and a proven portfolio of{" "}
+            <span className="text-primary font-semibold">500+ MW</span> of clean
+            energy projects, we are recognized for our commitment to innovation,
+            reliability, and customer-focused delivery. Our capabilities cover
+            the complete renewable energy value chain — from consultation,
+            feasibility studies, design, and engineering to procurement,
+            installation, commissioning, and long-term operations & maintenance
+            (O&M).
           </p>
         </div>
 
@@ -119,13 +127,24 @@ const About = () => {
                   </div>
                   <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                     <p>
-                      Located in India's largest wind energy corridor, <strong>Muppandal Belt, Tamil Nadu</strong>, we have been evolving with the renewable energy sector for over 20 years. As "Sons of the Soil," we understand the local landscape and harness nature's power efficiently.
+                      Located in India's largest wind energy corridor,{" "}
+                      <strong>Muppandal Belt, Tamil Nadu</strong>, we have been
+                      evolving with the renewable energy sector for over 20
+                      years. As "Sons of the Soil," we understand the local
+                      landscape and harness nature's power efficiently.
                     </p>
                     <p>
-                      Our team of <strong>150+ professionals</strong> brings <strong>200+ portfolios</strong> of work experience in wind, solar, and related industries, enabling us to deliver comprehensive energy solutions across India.
+                      Our team of <strong>150+ professionals</strong> brings{" "}
+                      <strong>200+ portfolios</strong> of work experience in
+                      wind, solar, and related industries, enabling us to
+                      deliver comprehensive energy solutions across India.
                     </p>
                     <p>
-                      We maintain wind farms totaling close to <strong>400MW</strong> and have successfully completed solar turnkey projects exceeding <strong>100MW</strong>, earning the trust of valuable customers throughout Tamil Nadu.
+                      We maintain wind farms totaling close to{" "}
+                      <strong>400MW</strong> and have successfully completed
+                      solar turnkey projects exceeding <strong>100MW</strong>,
+                      earning the trust of valuable customers throughout Tamil
+                      Nadu.
                     </p>
                   </div>
                 </div>
@@ -140,25 +159,33 @@ const About = () => {
                     <div className="text-center text-white w-full px-4 sm:px-6">
                       <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                         <div className="backdrop-blur-sm bg-white/10 rounded-lg p-3 sm:p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                          <div className="text-lg sm:text-xl lg:text-2xl font-bold mb-1">400MW</div>
+                          <div className="text-lg sm:text-xl lg:text-2xl font-bold mb-1">
+                            400MW
+                          </div>
                           <div className="text-xs sm:text-sm opacity-90">
                             Wind Farms Maintained
                           </div>
                         </div>
                         <div className="backdrop-blur-sm bg-white/10 rounded-lg p-3 sm:p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                          <div className="text-lg sm:text-xl lg:text-2xl font-bold mb-1">100MW</div>
+                          <div className="text-lg sm:text-xl lg:text-2xl font-bold mb-1">
+                            100MW
+                          </div>
                           <div className="text-xs sm:text-sm opacity-90">
                             Solar Projects Completed
                           </div>
                         </div>
                         <div className="backdrop-blur-sm bg-white/10 rounded-lg p-3 sm:p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                          <div className="text-lg sm:text-xl lg:text-2xl font-bold mb-1">150+</div>
+                          <div className="text-lg sm:text-xl lg:text-2xl font-bold mb-1">
+                            150+
+                          </div>
                           <div className="text-xs sm:text-sm opacity-90">
                             Team Professionals
                           </div>
                         </div>
                         <div className="backdrop-blur-sm bg-white/10 rounded-lg p-3 sm:p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                          <div className="text-lg sm:text-xl lg:text-2xl font-bold mb-1">20+</div>
+                          <div className="text-lg sm:text-xl lg:text-2xl font-bold mb-1">
+                            20+
+                          </div>
                           <div className="text-xs sm:text-sm opacity-90">
                             Years Experience
                           </div>
@@ -184,21 +211,31 @@ const About = () => {
                   </h2>
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
                 <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                   <p>
-                    At JMK Groups, we partner with leading technology providers and manufacturers to drive innovation in renewable energy solutions. Our expertise spans product development, project management, and commissioning, ensuring every solution we deliver is efficient, reliable, and future-ready.
+                    At JMK Groups, we partner with leading technology providers
+                    and manufacturers to drive innovation in renewable energy
+                    solutions. Our expertise spans product development, project
+                    management, and commissioning, ensuring every solution we
+                    deliver is efficient, reliable, and future-ready.
                   </p>
                   <p>
-                    As the world accelerates its shift towards greener energy, technologies such as wind, bio, hydro, and solar power are rapidly advancing through modern scientific innovations.
+                    As the world accelerates its shift towards greener energy,
+                    technologies such as wind, bio, hydro, and solar power are
+                    rapidly advancing through modern scientific innovations.
                   </p>
                 </div>
-                
+
                 <div className="bg-white/50 dark:bg-black/20 p-4 sm:p-6 rounded-lg">
-                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">Global Impact</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">
+                    Global Impact
+                  </h3>
                   <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
-                    This global transition is vital to safeguard our planet, reduce air pollution, slow rising global temperatures, and counter the growing threats of climate change.
+                    This global transition is vital to safeguard our planet,
+                    reduce air pollution, slow rising global temperatures, and
+                    counter the growing threats of climate change.
                   </p>
                   <div className="flex items-center text-primary font-semibold text-sm sm:text-base">
                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
@@ -261,7 +298,9 @@ const About = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground">Vision</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+                    Vision
+                  </h3>
                 </div>
                 <h4 className="text-lg sm:text-xl font-semibold text-primary mb-3 sm:mb-4">
                   Green and Clean mother earth for our children.
@@ -269,11 +308,17 @@ const About = () => {
                 <div className="space-y-3 text-sm sm:text-base text-muted-foreground">
                   <div className="flex items-start">
                     <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                    <p>We dream of a world where every child breathes clean air, and grows up on a green and thriving planet.</p>
+                    <p>
+                      We dream of a world where every child breathes clean air,
+                      and grows up on a green and thriving planet.
+                    </p>
                   </div>
                   <div className="flex items-start">
                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                    <p>Our mission goes beyond power, it's about preserving a living planet for future generations.</p>
+                    <p>
+                      Our mission goes beyond power, it's about preserving a
+                      living planet for future generations.
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -290,14 +335,21 @@ const About = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground">Mission</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+                    Mission
+                  </h3>
                 </div>
                 <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                   <p className="text-base sm:text-lg font-medium text-primary">
-                    Be an organization constantly focused on catering global energy needs through green and clean energy led by scientific innovations governed by ethical values.
+                    Be an organization constantly focused on catering global
+                    energy needs through green and clean energy led by
+                    scientific innovations governed by ethical values.
                   </p>
                   <p>
-                    To be an organization dedicated to meeting global energy needs through sustainable green and clean energy solutions, driven by scientific innovation and guided by strong ethical values.
+                    To be an organization dedicated to meeting global energy
+                    needs through sustainable green and clean energy solutions,
+                    driven by scientific innovation and guided by strong ethical
+                    values.
                   </p>
                 </div>
               </CardContent>
@@ -306,16 +358,24 @@ const About = () => {
             {/* Values Section - Improved Layout */}
             <div className="space-y-6 sm:space-y-8">
               <div className="text-center">
-                <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-2 sm:mb-3">Our Core Values</h3>
-                <p className="text-base sm:text-lg text-primary font-medium mb-2">Innovation | Integrity | Quality | Sustainability</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-2 sm:mb-3">
+                  Our Core Values
+                </h3>
+                <p className="text-base sm:text-lg text-primary font-medium mb-2">
+                  Innovation | Integrity | Quality | Sustainability
+                </p>
                 <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
-                  Driving clean energy solutions with creativity, ethics, excellence, and a commitment to a greener future.
+                  Driving clean energy solutions with creativity, ethics,
+                  excellence, and a commitment to a greener future.
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 {coreValues.map((value, index) => (
-                  <Card key={index} className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group h-full">
+                  <Card
+                    key={index}
+                    className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group h-full"
+                  >
                     <CardContent className="p-4 sm:p-6 text-center h-full flex flex-col">
                       <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-spring">
                         <value.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
@@ -399,8 +459,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
   );
