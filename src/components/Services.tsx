@@ -5,7 +5,6 @@ import operImg from "@/assets/operatation_maintanace.jpg";
 import itImg from "@/assets/it_solutions.jpg";
 import dataImg from "@/assets/data_analysis.jpg";
 import socialImg from "@/assets/social_responsibility.jpg";
-
 import operationsMaintenanceImg from "@/assets/operations-maintenance.jpg";
 import epcProjectsImg from "@/assets/epc-projects.jpg";
 import humanResourcesImg from "@/assets/human-resources.jpg";
@@ -17,11 +16,9 @@ import {
   Wind,
   Sun,
   Settings,
-  Database,
   Laptop,
   Users,
   ArrowRight,
-  Phone,
   MapPin,
   Zap,
   TrendingUp,
@@ -177,10 +174,9 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-secondary">
+      <section className="py-8 sm:py-10 lg:py-12 bg-gradient-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-8 sm:mb-10">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-4 animate-fade-in">
               Comprehensive Renewable Energy Solutions
             </h1>
@@ -194,7 +190,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
             {keyHighlights.map((highlight, index) => (
               <Badge
                 key={index}
@@ -208,10 +204,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section className="py-8 sm:py-10 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Our Services
             </h2>
@@ -225,7 +220,7 @@ const Services = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="relative overflow-hidden bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group h-full"
+                className="relative overflow-hidden bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring group h-full"
               >
                 <div className="relative h-48 sm:h-52 overflow-hidden">
                   <img
@@ -263,7 +258,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Core Sectors */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
@@ -277,8 +271,7 @@ const Services = () => {
           </div>
 
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 mb-8 sm:mb-12">
-            {/* Wind Energy Sector */}
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring">
+            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -327,8 +320,7 @@ const Services = () => {
               </CardContent>
             </Card>
 
-            {/* Solar Energy Sector */}
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring">
+            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -379,7 +371,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Business Verticals */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
@@ -396,7 +387,7 @@ const Services = () => {
             {businessVerticals.map((vertical, index) => (
               <Card
                 key={index}
-                className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group overflow-hidden h-full"
+                className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring group overflow-hidden h-full"
               >
                 <CardContent className="p-0 h-full flex flex-col">
                   <div className="relative h-32 sm:h-40 overflow-hidden">
@@ -428,7 +419,6 @@ const Services = () => {
             ))}
           </div>
 
-          {/* Pan-India Operations */}
           <Card className="bg-gradient-hero shadow-glow border-0 overflow-visible">
             <CardContent className="p-4 sm:p-6 lg:p-8">
               <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
@@ -487,7 +477,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Project Sites */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">

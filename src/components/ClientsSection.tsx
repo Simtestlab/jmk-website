@@ -56,7 +56,7 @@ const ClientsSection = () => {
                 <img
                   src={client.src}
                   alt={client.alt}
-                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain filter grayscale transition-all duration-300"
                 />
               </div>
             ))}
@@ -71,7 +71,7 @@ const ClientsSection = () => {
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
                   ? "bg-primary scale-125 shadow-[var(--shadow-glow)]"
-                  : "bg-muted hover:bg-muted-foreground hover:scale-110"
+                  : "bg-muted"
               }`}
             />
           ))}
