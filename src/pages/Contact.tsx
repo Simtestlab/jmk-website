@@ -57,16 +57,19 @@ const Contact = () => {
                 Get In Touch
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Ready to power your future with renewable energy? Our experts are here to help you find the perfect sustainable solution.
+                Ready to power your future with renewable energy? Our experts
+                are here to help you find the perfect sustainable solution.
               </p>
             </div>
 
             <div className="bg-card rounded-2xl p-4 shadow-medium border mb-8">
               <div className="mb-4">
                 <h2 className="text-2xl font-semibold mb-1">Contact us</h2>
-                <p className="text-muted-foreground text-base">We'll respond within 24 hours</p>
+                <p className="text-muted-foreground text-base">
+                  We'll respond within 24 hours
+                </p>
               </div>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name *</Label>
@@ -107,13 +110,18 @@ const Contact = () => {
                     placeholder="Tell us about your project requirements..."
                     rows={4}
                     value={formData.message}
-                    onChange={(e) => handleInputChange("message", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("message", e.target.value)
+                    }
                     className="resize-none"
                     required
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:opacity-90">
+                <Button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:opacity-90"
+                >
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </Button>
@@ -128,7 +136,8 @@ const Contact = () => {
                 Contact Information
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Reach out through any of these channels. We're here to help with your renewable energy needs.
+                Reach out through any of these channels. We're here to help with
+                your renewable energy needs.
               </p>
             </div>
 
@@ -140,8 +149,22 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Call Us</h3>
                   <div className="space-y-1 text-muted-foreground">
-                    <p><a href="tel:+919941066695" className="hover:text-primary transition-colors">+91 99410 66695</a></p>
-                    <p><a href="tel:+919597055889" className="hover:text-primary transition-colors">+91 95970 55889</a></p>
+                    <p>
+                      <a
+                        href="tel:+919941066695"
+                        className="hover:text-primary transition-colors"
+                      >
+                        +91 99410 66695
+                      </a>
+                    </p>
+                    <p>
+                      <a
+                        href="tel:+919597055889"
+                        className="hover:text-primary transition-colors"
+                      >
+                        +91 95970 55889
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -153,7 +176,10 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
                   <p className="text-muted-foreground">
-                    <a href="mailto:info@jmkgroups.in" className="hover:text-primary transition-colors">
+                    <a
+                      href="mailto:info@jmkgroups.in"
+                      className="hover:text-primary transition-colors"
+                    >
                       info@jmkgroups.in
                     </a>
                   </p>
@@ -167,8 +193,10 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Visit Us</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    No.46, Ramar Koil St<br />
-                    Ramnagar, Coimbatore<br />
+                    No.46, Ramar Koil St
+                    <br />
+                    Ramnagar, Coimbatore
+                    <br />
                     Tamil Nadu 641009
                   </p>
                 </div>
@@ -197,8 +225,8 @@ const Contact = () => {
               </p>
               <div className="flex items-center space-x-2 text-accent-foreground">
                 <Phone className="w-4 h-4" />
-                <a 
-                  href="tel:+919597055889" 
+                <a
+                  href="tel:+919597055889"
                   className="font-medium hover:underline"
                 >
                   +91 95970 55889

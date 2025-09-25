@@ -9,47 +9,45 @@ import solarPlantsImg from "@/assets/solar-plants.jpg";
 import powerTradingImg from "@/assets/power-trading.jpg";
 import corporateSolutionsImg from "@/assets/corporate-solutions.jpg";
 
-
 const businessVerticals = [
-    {
-      title: "Operations & Maintenance",
-      image: operationsMaintenanceImg,
-      description: "100+ WEG under Operations and Maintenance",
-      coverage: "Coimbatore, Tirupur, Tirunelveli and Kanyakumari Districts",
-    },
-    {
-      title: "EPC Projects",
-      image: epcProjectsImg,
-      description: "100 Cr Turn Over Projects – Solar and Wind EPC",
-      coverage: "Large-scale turnkey project delivery",
-    },
-    {
-      title: "Human Resources",
-      image: humanResourcesImg,
-      description: "Experienced and Skilled Man power team",
-      coverage: "150+ professionals with extensive expertise",
-    },
-    {
-      title: "Solar Plants",
-      image: solarPlantsImg,
-      description: "Solar plants at Tirupur, Tirunelveli, Tuticorin Districts",
-      coverage: "100+ MW solar capacity installed",
-    },
-    {
-      title: "Power Trading",
-      image: powerTradingImg,
-      description: "Power supplier with 100+ clients and 1000+ MW",
-      coverage: "Pan-India power distribution network",
-    },
-    {
-      title: "Corporate Solutions",
-      image: corporateSolutionsImg,
-      description:
-        "Supplying power to Corporates, Industries, Shopping Malls, Hospitals",
-      coverage: "Diverse client portfolio across sectors",
-    },
-  ];
-
+  {
+    title: "Operations & Maintenance",
+    image: operationsMaintenanceImg,
+    description: "100+ WEG under Operations and Maintenance",
+    coverage: "Coimbatore, Tirupur, Tirunelveli and Kanyakumari Districts",
+  },
+  {
+    title: "EPC Projects",
+    image: epcProjectsImg,
+    description: "100 Cr Turn Over Projects – Solar and Wind EPC",
+    coverage: "Large-scale turnkey project delivery",
+  },
+  {
+    title: "Human Resources",
+    image: humanResourcesImg,
+    description: "Experienced and Skilled Man power team",
+    coverage: "150+ professionals with extensive expertise",
+  },
+  {
+    title: "Solar Plants",
+    image: solarPlantsImg,
+    description: "Solar plants at Tirupur, Tirunelveli, Tuticorin Districts",
+    coverage: "100+ MW solar capacity installed",
+  },
+  {
+    title: "Power Trading",
+    image: powerTradingImg,
+    description: "Power supplier with 100+ clients and 1000+ MW",
+    coverage: "Pan-India power distribution network",
+  },
+  {
+    title: "Corporate Solutions",
+    image: corporateSolutionsImg,
+    description:
+      "Supplying power to Corporates, Industries, Shopping Malls, Hospitals",
+    coverage: "Diverse client portfolio across sectors",
+  },
+];
 
 const Projects = () => {
   return (
@@ -64,8 +62,8 @@ const Projects = () => {
                 JMK - THE BRAND
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-                Comprehensive renewable energy solutions across multiple business
-                verticals
+                Comprehensive renewable energy solutions across multiple
+                business verticals
               </p>
             </div>
 

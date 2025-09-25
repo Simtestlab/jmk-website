@@ -20,13 +20,15 @@ const CompanyOverview = () => {
     {
       icon: <Sun className="w-8 h-8 text-white" />,
       title: "Solar Solutions",
-      description: "Advanced photovoltaic systems for maximum energy efficiency",
+      description:
+        "Advanced photovoltaic systems for maximum energy efficiency",
       image: solarSolutionsImg,
     },
     {
       icon: <Wind className="w-8 h-8 text-white" />,
       title: "Wind Power",
-      description: "Cutting-edge wind turbines for sustainable energy generation",
+      description:
+        "Cutting-edge wind turbines for sustainable energy generation",
       image: windPowerImg,
     },
     {
@@ -67,8 +69,8 @@ const CompanyOverview = () => {
                   index === 0
                     ? "text-primary"
                     : index === 1
-                    ? "text-energy-wind"
-                    : "text-energy-solar"
+                      ? "text-energy-wind"
+                      : "text-energy-solar"
                 } leading-relaxed`}
               >
                 {tagline}
