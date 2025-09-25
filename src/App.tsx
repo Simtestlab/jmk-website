@@ -15,7 +15,6 @@ import ITSolutions from "./pages/services/ITSolutions";
 import DataAnalysis from "./pages/services/DataAnalysis";
 import SocialResponsibility from "./pages/services/SocialResponsibility";
 import Projects from "./pages/Projects";
-import SuccessStories from "./pages/SuccessStories";
 import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
@@ -53,7 +52,6 @@ const App = () => (
             element={<SocialResponsibility />}
           />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

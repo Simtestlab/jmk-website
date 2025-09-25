@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Leaf } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -21,11 +21,11 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    enquireFor: "",
+    service: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     toast({
       title: "Message Sent!",
@@ -35,12 +35,12 @@ const Contact = () => {
       name: "",
       email: "",
       phone: "",
-      enquireFor: "",
+      service: "",
       message: "",
     });
   };
 
-  const handleInputChange = (field: string, value: string) => {
+  const handleInputChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
@@ -48,119 +48,72 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12 lg:mb-16">
-            <h1 className="text-2xl sm:text-2xl lg:text-5xl font-bold mb-4 text-foreground">
-              Get In Touch
-            </h1>
-            <p className="text-muted-foreground text-lg lg:text-xl max-w-2xl mx-auto">
-              Ready to start your renewable energy project? Contact our experts today for a personalized consultation.
-            </p>
-          </div>
+      <div className="w-full pl-8 pr-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Left Section - Contact Form */}
+          <div>
+            <div className="mb-8">
+              <h1 className="text-4xl font-bold mb-4 text-foreground">
+                Get In Touch
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Ready to power your future with renewable energy? Our experts are here to help you find the perfect sustainable solution.
+              </p>
+            </div>
 
-          {/* Contact Form */}
-          <div className="mb-16 lg:mb-20">
-            <div className="bg-card rounded-2xl p-6 sm:p-8 lg:p-10 shadow-medium border">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl lg:text-3xl font-semibold mb-3 text-card-foreground">
-                  Send Us a Message
-                </h2>
-                <p className="text-muted-foreground">
-                  We'll respond within 24 hours
-                </p>
+            <div className="bg-card rounded-2xl p-4 shadow-medium border mb-8">
+              <div className="mb-4">
+                <h2 className="text-2xl font-semibold mb-1">Contact us</h2>
+                <p className="text-muted-foreground text-base">We'll respond within 24 hours</p>
               </div>
               
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name" className="text-sm font-medium">
-                      Full Name *
-                    </Label>
-                    <Input
-                      id="name"
-                      type="text"
-                      placeholder="Enter your full name"
-                      value={formData.name}
-                      onChange={(e) => handleInputChange("name", e.target.value)}
-                      className="h-12 border-input focus:border-ring"
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-sm font-medium">
-                      Email Address *
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your@email.com"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange("email", e.target.value)}
-                      className="h-12 border-input focus:border-ring"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-sm font-medium">
-                      Phone Number
-                    </Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      placeholder="+91 98765 43210"
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange("phone", e.target.value)}
-                      className="h-12 border-input focus:border-ring"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="enquire-for" className="text-sm font-medium">
-                      Service of Interest *
-                    </Label>
-                    <Select
-                      value={formData.enquireFor}
-                      onValueChange={(value) => handleInputChange("enquireFor", value)}
-                      required
-                    >
-                      <SelectTrigger className="h-12 border-input focus:border-ring">
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-background border border-border">
-                        <SelectItem value="solar-energy">Solar Energy Solutions</SelectItem>
-                        <SelectItem value="wind-energy">Wind Energy Solutions</SelectItem>
-                        <SelectItem value="both">Solar + Wind Hybrid</SelectItem>
-                        <SelectItem value="maintenance">O&M Services</SelectItem>
-                        <SelectItem value="trading">Power Trading</SelectItem>
-                        <SelectItem value="consultation">Consultation</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-sm font-medium">
-                    Project Details *
-                  </Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell us about your project requirements, location, capacity, timeline, etc."
-                    rows={6}
-                    value={formData.message}
-                    onChange={(e) => handleInputChange("message", e.target.value)}
-                    className="resize-none border-input focus:border-ring"
+                  <Label htmlFor="name">Full Name *</Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={(e) => handleInputChange("name", e.target.value)}
                     required
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  className="w-full h-12 text-base font-medium bg-gradient-primary hover:opacity-90 transition-opacity"
-                >
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email Address *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message">Project Details *</Label>
+                  <Textarea
+                    id="message"
+                    placeholder="Tell us about your project requirements..."
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => handleInputChange("message", e.target.value)}
+                    className="resize-none"
+                    required
+                  />
+                </div>
+
+                <Button type="submit" className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:opacity-90">
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </Button>
@@ -168,83 +121,81 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            <div className="text-center p-6 bg-secondary/50 rounded-xl">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-semibold mb-3 text-lg">Phone</h3>
-              <div className="space-y-2 text-muted-foreground">
-                <p className="text-sm">
-                  <a 
-                    href="tel:+919941066695" 
-                    className="hover:text-primary transition-colors"
-                  >
-                    +91 99410 66695
-                  </a>
-                </p>
-                <p className="text-sm">
-                  <a 
-                    href="tel:+919597055889" 
-                    className="hover:text-primary transition-colors"
-                  >
-                    +91 95970 55889
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center p-6 bg-secondary/50 rounded-xl">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-semibold mb-3 text-lg">Email</h3>
-              <p className="text-sm text-muted-foreground">
-                <a 
-                  href="mailto:info@jmkgroups.in" 
-                  className="hover:text-primary transition-colors"
-                >
-                  info@jmkgroups.in
-                </a>
+          {/* Right Section - Company Info */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-3xl font-bold mb-4 text-foreground">
+                Contact Information
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Reach out through any of these channels. We're here to help with your renewable energy needs.
               </p>
             </div>
 
-            <div className="text-center p-6 bg-secondary/50 rounded-xl">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-primary" />
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl border shadow-soft">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Call Us</h3>
+                  <div className="space-y-1 text-muted-foreground">
+                    <p><a href="tel:+919941066695" className="hover:text-primary transition-colors">+91 99410 66695</a></p>
+                    <p><a href="tel:+919597055889" className="hover:text-primary transition-colors">+91 95970 55889</a></p>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-semibold mb-3 text-lg">Address</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                No.46, Ramar Koil St<br />
-                Ramnagar, Coimbatore<br />
-                Tamil Nadu 641009
-              </p>
+
+              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl border shadow-soft">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Email</h3>
+                  <p className="text-muted-foreground">
+                    <a href="mailto:info@jmkgroups.in" className="hover:text-primary transition-colors">
+                      info@jmkgroups.in
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl border shadow-soft">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Visit Us</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    No.46, Ramar Koil St<br />
+                    Ramnagar, Coimbatore<br />
+                    Tamil Nadu 641009
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl border shadow-soft">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Office Hours</h3>
+                  <div className="text-muted-foreground">
+                    <p>Monday - Saturday</p>
+                    <p className="font-medium">9:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="text-center p-6 bg-secondary/50 rounded-xl">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-semibold mb-3 text-lg">Office Hours</h3>
-              <div className="text-sm text-muted-foreground space-y-1">
-                <p>Monday - Saturday</p>
-                <p className="font-medium">9:00 AM - 6:00 PM</p>
-                <p className="text-xs">Sunday: Closed</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Business Contact Card */}
-          <div className="mt-12 lg:mt-16">
-            <div className="bg-gradient-secondary rounded-2xl p-6 sm:p-8 text-center border shadow-soft">
-              <h3 className="text-xl font-semibold mb-2 text-secondary-foreground">
+            <div className="bg-gradient-secondary rounded-xl p-6 border shadow-soft">
+              <h3 className="text-xl font-semibold mb-2 text-accent-foreground">
                 Business Development
               </h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-accent-foreground/80 mb-3">
                 Mr. Vasanth D - Head: Business Development
               </p>
-              <div className="inline-flex items-center space-x-2 text-primary">
+              <div className="flex items-center space-x-2 text-accent-foreground">
                 <Phone className="w-4 h-4" />
                 <a 
                   href="tel:+919597055889" 
