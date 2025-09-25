@@ -5,6 +5,8 @@ import operImg from "@/assets/operatation_maintanace.jpg";
 import itImg from "@/assets/it_solutions.jpg";
 import dataImg from "@/assets/data_analysis.jpg";
 import socialImg from "@/assets/social_responsibility.jpg";
+import windSectorImg from "@/assets/wind_sector.jpg";
+import solarSectorImg from "@/assets/solar_sector.jpg";
 
 import { Badge } from "@/components/ui/badge";
 import {
@@ -175,38 +177,31 @@ const Services = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="relative overflow-hidden bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring group h-full"
+                className="relative overflow-hidden bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring group"
               >
-                <div className="relative h-48 sm:h-52 overflow-hidden">
+                <div className="relative overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  <div className="absolute top-4 left-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                      <service.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                    </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent"></div>
+                  <div className="relative p-4 sm:p-6 flex flex-col justify-end">
+                    <CardTitle className="text-xl sm:text-2xl font-bold mb-3 text-white leading-tight">
+                      {service.title}
+                    </CardTitle>
+                    <p className="text-sm sm:text-base text-white/90 mb-4 line-clamp-3 leading-relaxed">
+                      {service.description}
+                    </p>
+                    <Link
+                      to={service.path ?? "/services"}
+                      className="inline-flex items-center text-white hover:text-white/80 font-semibold transition-all duration-200 text-sm sm:text-base group-hover:translate-x-1 transform hover:underline"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
                   </div>
                 </div>
-
-                <CardContent className="p-4 sm:p-6 flex-grow flex flex-col">
-                  <CardTitle className="text-lg sm:text-xl font-bold text-foreground mb-3">
-                    {service.title}
-                  </CardTitle>
-                  <p className="text-sm sm:text-base text-muted-foreground mb-4 flex-grow">
-                    {service.description}
-                  </p>
-
-                  <Link
-                    to={service.path ?? "/services"}
-                    className="inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-colors text-sm sm:text-base"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </CardContent>
               </Card>
             ))}
           </div>
@@ -229,8 +224,12 @@ const Services = () => {
             <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Wind className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                    <img 
+                      src={windSectorImg} 
+                      alt="Wind Energy" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     Wind Energy Sector
@@ -278,8 +277,12 @@ const Services = () => {
             <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Sun className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                    <img 
+                      src={solarSectorImg} 
+                      alt="Solar Energy" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     Solar Energy Sector

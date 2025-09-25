@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Zap } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const navigation = {
@@ -31,9 +32,11 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
+                <img
+                  src={logo}
+                  alt="JMK Groups Logo"
+                  className="w-10 h-10 object-contain rounded-lg"
+                />
                 <div>
                   <div className="text-lg font-bold">JMK GROUPS</div>
                   <div className="text-sm text-background/70">
