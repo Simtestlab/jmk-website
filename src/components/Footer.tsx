@@ -10,7 +10,10 @@ const Footer = () => {
       { name: "O&M Services", href: "/services/operation-maintenance" },
       { name: "IT Solutions", href: "/services/it-solutions" },
       { name: "Data Analysis", href: "/services/data-analysis" },
-      { name: "Social Responsibility", href: "/services/social-responsibility" },
+      {
+        name: "Social Responsibility",
+        href: "/services/social-responsibility",
+      },
     ],
     resources: [
       { name: "Projects", href: "/projects" },
@@ -33,7 +36,9 @@ const Footer = () => {
                   className="w-12 h-12 object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-bold tracking-wide">JMK GROUPS</h3>
+                  <h3 className="text-xl font-bold tracking-wide">
+                    JMK GROUPS
+                  </h3>
                   <p className="text-sm text-background/70 font-medium">
                     Energy Solutions
                   </p>
