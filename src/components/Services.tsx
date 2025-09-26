@@ -137,9 +137,6 @@ const Services = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-4 animate-fade-in">
               Comprehensive Renewable Energy Solutions
             </h1>
-            <Badge variant="secondary" className="mb-4 px-4 py-2">
-              Our Services
-            </Badge>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Comprehensive renewable energy services designed to meet specific
               client needs, leveraging decades of experience and cutting-edge
