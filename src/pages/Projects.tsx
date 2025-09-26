@@ -1,7 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Building, Zap, Award, Target, MapPin } from "lucide-react";
+import {
+  CheckCircle,
+  Building,
+  Zap,
+  Award,
+  Target,
+  MapPin,
+} from "lucide-react";
 import operationsMaintenanceImg from "@/assets/operations-maintenance.jpg";
 import epcProjectsImg from "@/assets/epc-projects.jpg";
 import humanResourcesImg from "@/assets/human-resources.jpg";
@@ -50,18 +57,18 @@ const businessVerticals = [
   },
 ];
 const projectSites = [
-    "Muppandal",
-    "Avaraikulam",
-    "Surundai",
-    "Tenkasi",
-    "Devarkulam",
-    "Palladam",
-    "Kovilpatti",
-    "Kayathar",
-    "Theni",
-    "Udumalpet",
-  ];
-  
+  "Muppandal",
+  "Avaraikulam",
+  "Surundai",
+  "Tenkasi",
+  "Devarkulam",
+  "Palladam",
+  "Kovilpatti",
+  "Kayathar",
+  "Theni",
+  "Udumalpet",
+];
+
 const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -115,7 +122,6 @@ const Projects = () => {
                 </Card>
               ))}
             </div>
-
           </div>
         </section>
       </main>
@@ -136,11 +142,11 @@ const Projects = () => {
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {projectSites.map((site, index) => (
               <Badge
-              key={index}
-              variant="outline"
-              className="text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 cursor-default bg-gradient-card shadow-card border-primary/20"
+                key={index}
+                variant="outline"
+                className="text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 cursor-default bg-gradient-card shadow-card border-primary/20"
               >
-              {site}
+                {site}
               </Badge>
             ))}
           </div>

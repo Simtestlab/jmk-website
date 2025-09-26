@@ -6,7 +6,6 @@ import itImg from "@/assets/it_solutions.jpg";
 import dataImg from "@/assets/data_analysis.jpg";
 import socialImg from "@/assets/social_responsibility.jpg";
 
-
 import {
   Wind,
   Sun,
@@ -101,8 +100,6 @@ const Services = () => {
       ],
     },
   ];
-
-  
 
   const keyHighlights = [
     "20+ Years of Experience",
@@ -423,8 +420,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 };
