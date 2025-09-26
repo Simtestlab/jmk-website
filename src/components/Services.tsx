@@ -6,24 +6,19 @@ import itImg from "@/assets/it_solutions.jpg";
 import dataImg from "@/assets/data_analysis.jpg";
 import socialImg from "@/assets/social_responsibility.jpg";
 
-import { Badge } from "@/components/ui/badge";
+
 import {
   Wind,
   Sun,
   Settings,
   Laptop,
-  Users,
   ArrowRight,
-  MapPin,
-  Zap,
   TrendingUp,
   CheckCircle,
   Heart,
-  Building,
-  Target,
-  Award,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Badge } from "@/components/ui/badge";
 
 const Services = () => {
   const services = [
@@ -107,18 +102,7 @@ const Services = () => {
     },
   ];
 
-  const projectSites = [
-    "Muppandal",
-    "Avaraikulam",
-    "Surundai",
-    "Tenkasi",
-    "Devarkulam",
-    "Palladam",
-    "Kovilpatti",
-    "Kayathar",
-    "Theni",
-    "Udumalpet",
-  ];
+  
 
   const keyHighlights = [
     "20+ Years of Experience",
@@ -440,33 +424,7 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="py-0 sm:py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
-                Our Project Sites
-              </h2>
-            </div>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              We have successfully executed projects across multiple locations
-              in Tamil Nadu, India's renewable energy hub.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-            {projectSites.map((site, index) => (
-              <Badge
-                key={index}
-                variant="outline"
-                className="text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-primary hover:text-primary-foreground transition-colors cursor-default bg-gradient-card shadow-card border-primary/20"
-              >
-                {site}
-              </Badge>
-            ))}
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };

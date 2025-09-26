@@ -1,13 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Building, Zap, Award, Target } from "lucide-react";
+import { CheckCircle, Building, Zap, Award, Target, MapPin } from "lucide-react";
 import operationsMaintenanceImg from "@/assets/operations-maintenance.jpg";
 import epcProjectsImg from "@/assets/epc-projects.jpg";
 import humanResourcesImg from "@/assets/human-resources.jpg";
 import solarPlantsImg from "@/assets/solar-plants.jpg";
 import powerTradingImg from "@/assets/power-trading.jpg";
 import corporateSolutionsImg from "@/assets/corporate-solutions.jpg";
+import { Badge } from "@/components/ui/badge";
 
 const businessVerticals = [
   {
@@ -48,7 +49,19 @@ const businessVerticals = [
     coverage: "Diverse client portfolio across sectors",
   },
 ];
-
+const projectSites = [
+    "Muppandal",
+    "Avaraikulam",
+    "Surundai",
+    "Tenkasi",
+    "Devarkulam",
+    "Palladam",
+    "Kovilpatti",
+    "Kayathar",
+    "Theni",
+    "Udumalpet",
+  ];
+  
 const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -103,64 +116,36 @@ const Projects = () => {
               ))}
             </div>
 
-            <Card className="bg-gradient-hero shadow-glow border-0 overflow-visible">
-              <CardContent className="p-4 sm:p-6 lg:p-8">
-                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
-                  <div className="text-white">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
-                      Pan-India Operations
-                    </h3>
-                    <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 opacity-90">
-                      Leading renewable energy provider with extensive
-                      infrastructure and proven track record
-                    </p>
-                  </div>
-                  <div className="bg-white/10 p-4 sm:p-6 lg:p-8 backdrop-blur-sm rounded-lg">
-                    <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                      <div className="text-center">
-                        <Building className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 text-white" />
-                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
-                          100+
-                        </div>
-                        <div className="text-xs sm:text-sm text-white/80">
-                          Clients Served
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <Zap className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 text-white" />
-                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
-                          1000+
-                        </div>
-                        <div className="text-xs sm:text-sm text-white/80">
-                          MW Capacity
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <Award className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 text-white" />
-                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
-                          100Cr+
-                        </div>
-                        <div className="text-xs sm:text-sm text-white/80">
-                          Project Value
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <Target className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 text-white" />
-                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
-                          Pan
-                        </div>
-                        <div className="text-xs sm:text-sm text-white/80">
-                          India Reach
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </section>
       </main>
+      <section className="py-0 sm:py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
+                Our Project Sites
+              </h2>
+            </div>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+              We have successfully executed projects across multiple locations
+              in Tamil Nadu, India's renewable energy hub.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+            {projectSites.map((site, index) => (
+              <Badge
+              key={index}
+              variant="outline"
+              className="text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 cursor-default bg-gradient-card shadow-card border-primary/20"
+              >
+              {site}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );
