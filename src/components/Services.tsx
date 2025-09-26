@@ -163,7 +163,8 @@ const Services = () => {
               Our Services
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive renewable energy solutions with detailed expertise and proven track record
+              Comprehensive renewable energy solutions with detailed expertise
+              and proven track record
             </p>
           </div>
 
@@ -184,9 +185,11 @@ const Services = () => {
                 </div>
                 <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
                   <p>
-                    Wind power is a proven and powerful way to generate large-scale renewable energy. 
-                    Capable of producing substantial electricity, wind energy has emerged as a reliable 
-                    solution for powering industries, businesses, and communities.
+                    Wind power is a proven and powerful way to generate
+                    large-scale renewable energy. Capable of producing
+                    substantial electricity, wind energy has emerged as a
+                    reliable solution for powering industries, businesses, and
+                    communities.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center">
@@ -228,8 +231,9 @@ const Services = () => {
                 </div>
                 <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
                   <p>
-                    At JMK Groups, we deliver comprehensive solar energy solutions that power businesses, 
-                    industries, and communities. As a leading EPC partner and project developer, 
+                    At JMK Groups, we deliver comprehensive solar energy
+                    solutions that power businesses, industries, and
+                    communities. As a leading EPC partner and project developer,
                     we provide end-to-end services.
                   </p>
                   <div className="space-y-2">
@@ -272,8 +276,9 @@ const Services = () => {
                 </div>
                 <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
                   <p>
-                    Comprehensive O&M services designed to ensure optimal performance, maximum uptime, 
-                    and long-term reliability of your renewable energy assets with multi-brand expertise.
+                    Comprehensive O&M services designed to ensure optimal
+                    performance, maximum uptime, and long-term reliability of
+                    your renewable energy assets with multi-brand expertise.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center">
@@ -315,9 +320,10 @@ const Services = () => {
                 </div>
                 <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
                   <p>
-                    We provide advanced technology solutions for energy management, monitoring, 
-                    and data analytics, enabling businesses and utilities to optimize performance 
-                    and improve efficiency.
+                    We provide advanced technology solutions for energy
+                    management, monitoring, and data analytics, enabling
+                    businesses and utilities to optimize performance and improve
+                    efficiency.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center">
@@ -359,9 +365,9 @@ const Services = () => {
                 </div>
                 <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
                   <p>
-                    We offer comprehensive data analytics solutions to optimize energy generation, 
-                    monitor system performance, and enable predictive maintenance for renewable 
-                    energy assets.
+                    We offer comprehensive data analytics solutions to optimize
+                    energy generation, monitor system performance, and enable
+                    predictive maintenance for renewable energy assets.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center">
@@ -403,8 +409,9 @@ const Services = () => {
                 </div>
                 <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
                   <p>
-                    At JMK Groups, we are committed to community development and sustainable practices 
-                    that create lasting positive impact in the regions where we operate.
+                    At JMK Groups, we are committed to community development and
+                    sustainable practices that create lasting positive impact in
+                    the regions where we operate.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center">
