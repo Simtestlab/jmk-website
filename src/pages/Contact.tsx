@@ -45,7 +45,8 @@ const Contact = () => {
       <section className="py-12 bg-gradient-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to power your future with renewable energy? Our experts are here to help you find the perfect sustainable solution.
+            Ready to power your future with renewable energy? Our experts are
+            here to help you find the perfect sustainable solution.
           </p>
         </div>
       </section>
@@ -54,12 +55,15 @@ const Contact = () => {
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
             {/* Contact Form */}
             <div className="bg-card rounded-2xl p-8 shadow-card border">
               <div className="mb-6">
-                <h2 className="text-2xl font-semibold mb-2 text-foreground">Contact us</h2>
-                <p className="text-muted-foreground">We'll respond within 24 hours</p>
+                <h2 className="text-2xl font-semibold mb-2 text-foreground">
+                  Contact us
+                </h2>
+                <p className="text-muted-foreground">
+                  We'll respond within 24 hours
+                </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -102,7 +106,9 @@ const Contact = () => {
                     placeholder="Tell us about your project requirements..."
                     rows={4}
                     value={formData.message}
-                    onChange={(e) => handleInputChange("message", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("message", e.target.value)
+                    }
                     className="resize-none"
                     required
                   />
@@ -118,9 +124,12 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-2xl font-bold mb-4 text-foreground">Contact Information</h2>
+                <h2 className="text-2xl font-bold mb-4 text-foreground">
+                  Contact Information
+                </h2>
                 <p className="text-muted-foreground">
-                  Reach out through any of these channels. We're here to help with your renewable energy needs.
+                  Reach out through any of these channels. We're here to help
+                  with your renewable energy needs.
                 </p>
               </div>
 
@@ -130,15 +139,23 @@ const Contact = () => {
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1 text-foreground">Call Us</h3>
+                    <h3 className="font-medium mb-1 text-foreground">
+                      Call Us
+                    </h3>
                     <div className="space-y-1 text-sm text-muted-foreground">
                       <p>
-                        <a href="tel:+919941066695" className="hover:text-primary transition-colors">
+                        <a
+                          href="tel:+919941066695"
+                          className="hover:text-primary transition-colors"
+                        >
                           +91 99410 66695
                         </a>
                       </p>
                       <p>
-                        <a href="tel:+919597055889" className="hover:text-primary transition-colors">
+                        <a
+                          href="tel:+919597055889"
+                          className="hover:text-primary transition-colors"
+                        >
                           +91 95970 55889
                         </a>
                       </p>
@@ -153,7 +170,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1 text-foreground">Email</h3>
                     <p className="text-sm text-muted-foreground">
-                      <a href="mailto:info@jmkgroups.in" className="hover:text-primary transition-colors">
+                      <a
+                        href="mailto:info@jmkgroups.in"
+                        className="hover:text-primary transition-colors"
+                      >
                         info@jmkgroups.in
                       </a>
                     </p>
@@ -165,10 +185,14 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1 text-foreground">Visit Us</h3>
+                    <h3 className="font-medium mb-1 text-foreground">
+                      Visit Us
+                    </h3>
                     <p className="text-sm text-muted-foreground">
-                      No.46, Ramar Koil St<br />
-                      Ramnagar, Coimbatore<br />
+                      No.46, Ramar Koil St
+                      <br />
+                      Ramnagar, Coimbatore
+                      <br />
                       Tamil Nadu 641009
                     </p>
                   </div>
@@ -179,10 +203,14 @@ const Contact = () => {
                     <Clock className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1 text-foreground">Office Hours</h3>
+                    <h3 className="font-medium mb-1 text-foreground">
+                      Office Hours
+                    </h3>
                     <div className="text-sm text-muted-foreground">
                       <p>Monday - Saturday</p>
-                      <p className="font-medium text-foreground">9:00 AM - 6:00 PM</p>
+                      <p className="font-medium text-foreground">
+                        9:00 AM - 6:00 PM
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -190,11 +218,18 @@ const Contact = () => {
 
               {/* Business Development Contact */}
               <div className="bg-gradient-secondary rounded-lg p-6 border">
-                <h3 className="text-lg font-semibold mb-2 text-foreground">Business Development</h3>
-                <p className="text-muted-foreground mb-3">Mr. Vasanth D - Head: Business Development</p>
+                <h3 className="text-lg font-semibold mb-2 text-foreground">
+                  Business Development
+                </h3>
+                <p className="text-muted-foreground mb-3">
+                  Mr. Vasanth D - Head: Business Development
+                </p>
                 <div className="flex items-center space-x-2 text-foreground">
                   <Phone className="w-4 h-4 text-primary" />
-                  <a href="tel:+919597055889" className="font-medium hover:text-primary transition-colors">
+                  <a
+                    href="tel:+919597055889"
+                    className="font-medium hover:text-primary transition-colors"
+                  >
                     +91 95970 55889
                   </a>
                 </div>
