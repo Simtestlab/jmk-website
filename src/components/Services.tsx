@@ -5,8 +5,6 @@ import operImg from "@/assets/operatation_maintanace.jpg";
 import itImg from "@/assets/it_solutions.jpg";
 import dataImg from "@/assets/data_analysis.jpg";
 import socialImg from "@/assets/social_responsibility.jpg";
-import windSectorImg from "@/assets/wind_sector.jpg";
-import solarSectorImg from "@/assets/solar_sector.jpg";
 
 import { Badge } from "@/components/ui/badge";
 import {
@@ -158,168 +156,277 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="py-8 sm:py-10 lg:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Services
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              From renewable energy development to maintenance and data
-              analytics
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12 sm:mb-16">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="relative overflow-hidden bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring group"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent"></div>
-                  <div className="relative p-4 sm:p-6 flex flex-col justify-end">
-                    <CardTitle className="text-xl sm:text-2xl font-bold mb-3 text-white leading-tight">
-                      {service.title}
-                    </CardTitle>
-                    <p className="text-sm sm:text-base text-white/90 mb-4 line-clamp-3 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <Link
-                      to={service.path ?? "/services"}
-                      className="inline-flex items-center text-white hover:text-white/80 font-semibold transition-all duration-200 text-sm sm:text-base group-hover:translate-x-1 transform hover:underline"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Core Sectors
+              Our Services
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Specialized expertise across wind and solar energy sectors with
-              comprehensive solutions
+              Comprehensive renewable energy solutions with detailed expertise and proven track record
             </p>
           </div>
 
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 mb-8 sm:mb-12">
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring">
+            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
                     <img
-                      src={windSectorImg}
+                      src={windImg}
                       alt="Wind Energy"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground">
-                    Wind Energy Sector
+                    Wind Energy Projects
                   </h3>
                 </div>
-                <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-muted-foreground">
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center">
-                      <Zap className="w-4 h-4 text-primary mr-2" />
-                      Annual O&M Security Service Contracts
-                    </h4>
-                    <p>
-                      Developers conduct extensive wind resource assessments to
-                      identify suitable locations for wind farms. Areas with
-                      consistent and strong wind speeds are preferred.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center">
-                      <Settings className="w-4 h-4 text-primary mr-2" />
-                      Turn Key Projects
-                    </h4>
-                    <p>
-                      With our expertise gained over 20 years, we will identify
-                      the right load and location, perform micrositing, land
-                      deals, Transportation, foundation, Balance of plants and
-                      TANGEDCO powering.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center">
-                      <Users className="w-4 h-4 text-primary mr-2" />
-                      Power Requirements
-                    </h4>
-                    <p>
-                      We offer consultation mentorship and Govt liaison services
-                      right from power registering to catering power needs
-                      between the organizations.
-                    </p>
+                <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
+                  <p>
+                    Wind power is a proven and powerful way to generate large-scale renewable energy. 
+                    Capable of producing substantial electricity, wind energy has emerged as a reliable 
+                    solution for powering industries, businesses, and communities.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Large-scale renewable energy solutions</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>BOOT & CAPS model implementations</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Proven technology with 20+ years experience</span>
+                    </div>
                   </div>
                 </div>
+                <Link
+                  to="/services/wind-energy"
+                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
+                >
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring">
+            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
                     <img
-                      src={solarSectorImg}
+                      src={solarImg}
                       alt="Solar Energy"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground">
-                    Solar Energy Sector
+                    Solar Power Projects
                   </h3>
                 </div>
-                <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-muted-foreground">
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center">
-                      <Building className="w-4 h-4 text-primary mr-2" />
-                      Dedicated Solar Energy Wing
-                    </h4>
-                    <p>
-                      We have end to-end in-house capabilities across all
-                      aspects; we follow global best practices across Products,
-                      Process, Technology and Safety.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center">
-                      <Target className="w-4 h-4 text-primary mr-2" />
-                      Customized Solar Projects
-                    </h4>
-                    <p>
-                      JMK is committed to developing customized solar Projects
-                      for Industrial, Commercial, and Institutional consumers.
-                      We offer each customer an innovative solution concept.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center">
-                      <Award className="w-4 h-4 text-primary mr-2" />
-                      Professional Project Management
-                    </h4>
-                    <p>
-                      With an experienced Project management team, we follow an
-                      exceptionally professional and systematic approach to all
-                      our solar projects.
-                    </p>
+                <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
+                  <p>
+                    At JMK Groups, we deliver comprehensive solar energy solutions that power businesses, 
+                    industries, and communities. As a leading EPC partner and project developer, 
+                    we provide end-to-end services.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>End-to-end EPC services</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Site acquisition to O&M</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Industrial & commercial solutions</span>
+                    </div>
                   </div>
                 </div>
+                <Link
+                  to="/services/solar-power"
+                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
+                >
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                    <img
+                      src={operImg}
+                      alt="Operations & Maintenance"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                    Operations & Maintenance
+                  </h3>
+                </div>
+                <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
+                  <p>
+                    Comprehensive O&M services designed to ensure optimal performance, maximum uptime, 
+                    and long-term reliability of your renewable energy assets with multi-brand expertise.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Maximum uptime guarantee</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Long-term reliability assurance</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Multi-brand service expertise</span>
+                    </div>
+                  </div>
+                </div>
+                <Link
+                  to="/services/operation-maintenance"
+                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
+                >
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                    <img
+                      src={itImg}
+                      alt="IT Solutions"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                    IT Solutions
+                  </h3>
+                </div>
+                <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
+                  <p>
+                    We provide advanced technology solutions for energy management, monitoring, 
+                    and data analytics, enabling businesses and utilities to optimize performance 
+                    and improve efficiency.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Smart monitoring systems</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Real-time performance tracking</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Advanced analytics & reporting</span>
+                    </div>
+                  </div>
+                </div>
+                <Link
+                  to="/services/it-solutions"
+                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
+                >
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                    <img
+                      src={dataImg}
+                      alt="Data Analysis"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                    Data Analysis
+                  </h3>
+                </div>
+                <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
+                  <p>
+                    We offer comprehensive data analytics solutions to optimize energy generation, 
+                    monitor system performance, and enable predictive maintenance for renewable 
+                    energy assets.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Performance optimization</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Predictive maintenance</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Actionable insights & reporting</span>
+                    </div>
+                  </div>
+                </div>
+                <Link
+                  to="/services/data-analysis"
+                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
+                >
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                    <img
+                      src={socialImg}
+                      alt="Social Responsibility"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                    Social Responsibility
+                  </h3>
+                </div>
+                <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
+                  <p>
+                    At JMK Groups, we are committed to community development and sustainable practices 
+                    that create lasting positive impact in the regions where we operate.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Community development programs</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Education & healthcare initiatives</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <span>Local economic growth support</span>
+                    </div>
+                  </div>
+                </div>
+                <Link
+                  to="/services/social-responsibility"
+                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
+                >
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </CardContent>
             </Card>
           </div>
