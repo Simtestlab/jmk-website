@@ -222,9 +222,9 @@ const Services = () => {
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
-                    <img 
-                      src={windSectorImg} 
-                      alt="Wind Energy" 
+                    <img
+                      src={windSectorImg}
+                      alt="Wind Energy"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -275,9 +275,9 @@ const Services = () => {
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
-                    <img 
-                      src={solarSectorImg} 
-                      alt="Solar Energy" 
+                    <img
+                      src={solarSectorImg}
+                      alt="Solar Energy"
                       className="w-full h-full object-cover"
                     />
                   </div>
