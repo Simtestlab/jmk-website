@@ -5,22 +5,16 @@ import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const navigation = {
-    company: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/about#team" },
-      { name: "Careers", href: "/careers" },
-      { name: "News", href: "/news" },
-    ],
     services: [
-      { name: "Wind Energy", href: "/services#wind" },
-      { name: "Solar Power", href: "/services#solar" },
-      { name: "O&M Services", href: "/services#maintenance" },
-      { name: "IT Solutions", href: "/services#it" },
+      { name: "Wind Energy", href: "/services/wind-energy" },
+      { name: "Solar Power", href: "/services/solar-power" },
+      { name: "O&M Services", href: "/services/operation-maintenance" },
+      { name: "IT Solutions", href: "/services/it-solutions" },
+      { name: "Data Analysis", href: "/services/data-analysis" },
+      { name: "Social Responsibility", href: "/services/social-responsibility" },
     ],
     resources: [
       { name: "Projects", href: "/projects" },
-      { name: "Industries", href: "/industries" },
-      { name: "Success Stories", href: "/success-stories" },
       { name: "Contact", href: "/contact" },
     ],
   };
@@ -71,25 +65,6 @@ const Footer = () => {
                   <MapPin className="w-4 h-4 text-primary-glow" />
                   <span>Muppandal Belt, Tamil Nadu</span>
                 </div>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <div>
-                <h3 className="font-semibold text-lg mb-6 text-center">
-                  Company
-                </h3>
-                <ul className="space-y-4 text-center">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        to={item.href}
-                        className="text-background/70 hover:text-primary-glow transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
             <div className="flex justify-center">
