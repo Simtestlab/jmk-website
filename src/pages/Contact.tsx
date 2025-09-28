@@ -4,14 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { MapPin, Phone, Mail, Clock, Send, Leaf } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -48,24 +41,27 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <div className="w-full pl-8 pr-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Left Section - Contact Form */}
-          <div>
-            <div className="mb-8">
-              <h1 className="text-4xl font-bold mb-4 text-foreground">
-                Get In Touch
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Ready to power your future with renewable energy? Our experts
-                are here to help you find the perfect sustainable solution.
-              </p>
-            </div>
+      {/* Hero Section */}
+      <section className="py-12 bg-gradient-secondary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Ready to power your future with renewable energy? Our experts are
+            here to help you find the perfect sustainable solution.
+          </p>
+        </div>
+      </section>
 
-            <div className="bg-card rounded-2xl p-4 shadow-medium border mb-8">
-              <div className="mb-4">
-                <h2 className="text-2xl font-semibold mb-1">Contact us</h2>
-                <p className="text-muted-foreground text-base">
+      {/* Main Content */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-card rounded-2xl p-8 shadow-card border">
+              <div className="mb-6">
+                <h2 className="text-2xl font-semibold mb-2 text-foreground">
+                  Contact us
+                </h2>
+                <p className="text-muted-foreground">
                   We'll respond within 24 hours
                 </p>
               </div>
@@ -118,124 +114,130 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:opacity-90"
-                >
+                <Button type="submit" className="w-full">
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </Button>
               </form>
             </div>
-          </div>
 
-          {/* Right Section - Company Info */}
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-3xl font-bold mb-4 text-foreground">
-                Contact Information
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Reach out through any of these channels. We're here to help with
-                your renewable energy needs.
-              </p>
-            </div>
-
+            {/* Contact Information */}
             <div className="space-y-6">
-              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl border shadow-soft">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-primary" />
+              <div>
+                <h2 className="text-2xl font-bold mb-4 text-foreground">
+                  Contact Information
+                </h2>
+                <p className="text-muted-foreground">
+                  Reach out through any of these channels. We're here to help
+                  with your renewable energy needs.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4 p-4 bg-card rounded-lg border">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium mb-1 text-foreground">
+                      Call Us
+                    </h3>
+                    <div className="space-y-1 text-sm text-muted-foreground">
+                      <p>
+                        <a
+                          href="tel:+919941066695"
+                          className="hover:text-primary transition-colors"
+                        >
+                          +91 99410 66695
+                        </a>
+                      </p>
+                      <p>
+                        <a
+                          href="tel:+919597055889"
+                          className="hover:text-primary transition-colors"
+                        >
+                          +91 95970 55889
+                        </a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Call Us</h3>
-                  <div className="space-y-1 text-muted-foreground">
-                    <p>
+
+                <div className="flex items-start space-x-4 p-4 bg-card rounded-lg border">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium mb-1 text-foreground">Email</h3>
+                    <p className="text-sm text-muted-foreground">
                       <a
-                        href="tel:+919941066695"
+                        href="mailto:info@jmkgroups.in"
                         className="hover:text-primary transition-colors"
                       >
-                        +91 99410 66695
-                      </a>
-                    </p>
-                    <p>
-                      <a
-                        href="tel:+919597055889"
-                        className="hover:text-primary transition-colors"
-                      >
-                        +91 95970 55889
+                        info@jmkgroups.in
                       </a>
                     </p>
                   </div>
                 </div>
-              </div>
 
-              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl border shadow-soft">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-primary" />
+                <div className="flex items-start space-x-4 p-4 bg-card rounded-lg border">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium mb-1 text-foreground">
+                      Visit Us
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      No.46, Ramar Koil St
+                      <br />
+                      Ramnagar, Coimbatore
+                      <br />
+                      Tamil Nadu 641009
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Email</h3>
-                  <p className="text-muted-foreground">
-                    <a
-                      href="mailto:info@jmkgroups.in"
-                      className="hover:text-primary transition-colors"
-                    >
-                      info@jmkgroups.in
-                    </a>
-                  </p>
-                </div>
-              </div>
 
-              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl border shadow-soft">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Visit Us</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    No.46, Ramar Koil St
-                    <br />
-                    Ramnagar, Coimbatore
-                    <br />
-                    Tamil Nadu 641009
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl border shadow-soft">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Office Hours</h3>
-                  <div className="text-muted-foreground">
-                    <p>Monday - Saturday</p>
-                    <p className="font-medium">9:00 AM - 6:00 PM</p>
+                <div className="flex items-start space-x-4 p-4 bg-card rounded-lg border">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium mb-1 text-foreground">
+                      Office Hours
+                    </h3>
+                    <div className="text-sm text-muted-foreground">
+                      <p>Monday - Saturday</p>
+                      <p className="font-medium text-foreground">
+                        9:00 AM - 6:00 PM
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-gradient-secondary rounded-xl p-6 border shadow-soft">
-              <h3 className="text-xl font-semibold mb-2 text-accent-foreground">
-                Business Development
-              </h3>
-              <p className="text-accent-foreground/80 mb-3">
-                Mr. Vasanth D - Head: Business Development
-              </p>
-              <div className="flex items-center space-x-2 text-accent-foreground">
-                <Phone className="w-4 h-4" />
-                <a
-                  href="tel:+919597055889"
-                  className="font-medium hover:underline"
-                >
-                  +91 95970 55889
-                </a>
+              {/* Business Development Contact */}
+              <div className="bg-gradient-secondary rounded-lg p-6 border">
+                <h3 className="text-lg font-semibold mb-2 text-foreground">
+                  Business Development
+                </h3>
+                <p className="text-muted-foreground mb-3">
+                  Mr. Vasanth D - Head: Business Development
+                </p>
+                <div className="flex items-center space-x-2 text-foreground">
+                  <Phone className="w-4 h-4 text-primary" />
+                  <a
+                    href="tel:+919597055889"
+                    className="font-medium hover:text-primary transition-colors"
+                  >
+                    +91 95970 55889
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <Footer />
     </div>
