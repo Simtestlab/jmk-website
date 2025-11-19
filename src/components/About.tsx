@@ -329,33 +329,10 @@ const About = () => {
           </Card>
         </div>
 
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Organizational Hierarchy
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our leadership structure designed for excellence in renewable
-              energy operations
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-gradient-card shadow-elegant border-0 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="flex justify-center">
-                  <img
-                    src={organizationalChart}
-                    alt="JMK Groups Organizational Hierarchy Chart"
-                    className="w-full max-w-2xl h-auto object-contain"
-                  />
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
         <div className="mb-10">
+          <header className="text-4xl md:text-4xl font-bold text-left text-foreground mb-4">
+            Achievements
+          </header>
           <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-3">
             Milestones We Reach
           </h2>

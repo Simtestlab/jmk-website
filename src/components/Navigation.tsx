@@ -13,6 +13,7 @@ const Navigation = () => {
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
+     { name: "Blog", href: "/blog" },
     { name: "Success Stories", href: "/success-stories" },
     { name: "Contact", href: "/contact" },
   ];
@@ -59,19 +60,6 @@ const Navigation = () => {
                 </Link>
               ))}
             </div>
-          </div>
-
-          {/* Contact Button */}
-          <div className="hidden md:block">
-            <Button variant="cta" asChild>
-              <a
-                href="tel:+919941066695"
-                className="flex items-center space-x-2"
-              >
-                <Phone className="w-4 h-4" />
-                <span>+91 99410 66695</span>
-              </a>
-            </Button>
           </div>
 
           {/* Mobile menu button */}

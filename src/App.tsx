@@ -16,6 +16,7 @@ import SocialResponsibility from "./pages/services/SocialResponsibility";
 import Projects from "./pages/Projects";
 import SuccessStories from "./pages/SuccessStories";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -119,38 +119,6 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Business Head */}
-            <Card className="overflow-hidden border-0 shadow-elegant bg-gradient-to-br from-card to-card/80">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-2 bg-accent/10 rounded-lg">
-                    <User className="h-5 w-5 text-accent" />
-                  </div>
-                  <h3 className="text-xl font-semibold">
-                    Business Development
-                  </h3>
-                </div>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground">
-                      Mr. Vasanth D
-                    </h4>
-                    <p className="text-muted-foreground">
-                      Head: Business Development
-                    </p>
-                  </div>
-                  <div className="p-4 bg-background/50 rounded-lg border border-border/50">
-                    <a
-                      href="tel:+919597055889"
-                      className="text-primary hover:underline font-medium"
-                    >
-                      +91 9597055889
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Address */}
             <Card className="overflow-hidden border-0 shadow-elegant bg-gradient-to-br from-card to-card/80">
               <CardContent className="p-8">
