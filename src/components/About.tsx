@@ -25,7 +25,6 @@ import humanResourcesImg from "@/assets/human-resources.jpg";
 import solarPlantsImg from "@/assets/solar-plants.jpg";
 import powerTradingImg from "@/assets/power-trading.jpg";
 import corporateSolutionsImg from "@/assets/corporate-solutions.jpg";
-import organizationalChart from "@/assets/organizational-chart.png";
 
 const About = () => {
   const milestones = [
@@ -164,6 +163,24 @@ const About = () => {
             leader in renewable energy solutions across India, guided by
             innovation and ethical values.
           </p>
+        </div>
+
+        {/* Achievements Subsection */}
+        <div className="mb-16">
+          <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 shadow-lg border-0">
+            <CardContent className="p-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Achievements</h2>
+              <ul className="list-disc pl-6 space-y-2 text-lg text-muted-foreground">
+                <li>400MW+ Wind Farms Maintained</li>
+                <li>100MW+ Solar Projects Completed</li>
+                <li>100+ Clients Served Pan-India</li>
+                <li>100Cr+ Project Value Delivered</li>
+                <li>20+ Years of Industry Experience</li>
+                <li>Recognized EPC and O&M Partner of EWT Netherlands</li>
+                <li>Pan-India Power Trading Network</li>
+              </ul>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="mb-16">

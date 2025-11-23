@@ -26,8 +26,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Services = () => {
-  const services = [
+export const services = [
     {
       icon: Wind,
       title: "Wind Energy Projects",
@@ -35,6 +34,7 @@ const Services = () => {
         "Developers conduct extensive wind resource assessments to identify suitable locations for wind farms. With our expertise gained over 20 years, we provide turnkey projects and comprehensive O&M services.",
       image: windImg,
       path: "/services/wind-energy",
+      status: "completed",
     },
     {
       icon: Sun,
@@ -43,6 +43,7 @@ const Services = () => {
         "JMK Energy Infra provides turnkey solutions for solar projects from CONCEPT TO COMMISSIONING. This includes Engineering, Procurement & Construction (EPC) solutions for Grid-connected ground-mounted solar and Rooftop solar projects.",
       image: solarImg,
       path: "/services/solar-power",
+      status: "ongoing",
     },
     {
       icon: Settings,
@@ -51,6 +52,7 @@ const Services = () => {
         "Operation and Maintenance (O&M) involves regular activities and tasks necessary to ensure the optimal performance, reliability, and safety of the facility throughout its operational life.",
       image: operImg,
       path: "/services/operation-maintenance",
+      status: "ongoing",
     },
     {
       icon: Laptop,
@@ -59,6 +61,7 @@ const Services = () => {
         "IT solutions encompass a wide range of technologies, services, and strategies designed to address specific business needs and challenges using computer systems, software, and networking technologies.",
       image: itImg,
       path: "/services/it-solutions",
+      status: "ongoing",
     },
     {
       icon: Database,
@@ -67,6 +70,7 @@ const Services = () => {
         "Data analysis involves the process of inspecting, cleaning, transforming, and modeling data to discover useful information, draw conclusions, and support decision-making.",
       image: dataImg,
       path: "/services/data-analysis",
+      status: "completed",
     },
     {
       icon: Users,
@@ -75,10 +79,11 @@ const Services = () => {
         "As our organization believes in giving back to the society, we take part in various activities such as aiding for education among the downtrodden, promotion of scientific temper, Tribal welfare, women upliftment, and green environment activities.",
       image: socialImg,
       path: "/services/social-responsibility",
+      status: "completed",
     },
   ];
 
-  const projectSites = [
+    const projectSites = [
     "Muppandal",
     "Avaraikulam",
     "Surundai",
@@ -97,6 +102,8 @@ const Services = () => {
     "EPC/Turnkey Project Specialists",
     "Power Trading Experts",
   ];
+
+  const Services = () => {
 
   return (
     <div className="min-h-screen bg-background">
@@ -123,7 +130,7 @@ const Services = () => {
             ))}
           </div>
 
-          <div className="mb-20">
+          <div>
             <Accordion type="multiple" className="w-full">
               {services.map((service, index) => {
                 const Icon = service.icon;
@@ -169,6 +176,30 @@ const Services = () => {
                   </AccordionItem>
                 );
               })}
+              {/* Completed Projects Accordion Item */}
+              <AccordionItem value="completed-projects">
+                <AccordionTrigger className="text-left bg-white/80 hover:bg-white/90 border border-muted-foreground/10 rounded-lg px-4 py-3 mb-2 shadow-sm transition-all">
+                  <div className="flex items-center gap-3">
+                    <Database className="h-6 w-6 text-primary" aria-hidden="true" />
+                    <span className="text-lg md:text-xl font-bold">Completed Projects</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="bg-white/90 rounded-lg p-6 border border-muted-foreground/10 shadow">
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
+                      A portfolio of our finished and delivered projects.
+                    </p>
+                    <Link
+                      to="/projects/completed"
+                      className="inline-flex items-center text-primary font-semibold hover:underline"
+                      aria-label="View all completed projects"
+                    >
+                      View all completed projects
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
             </Accordion>
           </div>
         </div>
