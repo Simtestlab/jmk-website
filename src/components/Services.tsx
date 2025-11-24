@@ -1,11 +1,17 @@
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Card, CardContent} from "@/components/ui/card";
 import windImg from "@/assets/wind_energy.jpg";
 import solarImg from "@/assets/solar_power.jpg";
 import operImg from "@/assets/operatation_maintanace.jpg";
 import itImg from "@/assets/it_solutions.jpg";
 import dataImg from "@/assets/data_analysis.jpg";
 import socialImg from "@/assets/social_responsibility.jpg";
-
+import { Database, MapPin } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import {
   Wind,
   Sun,
@@ -19,8 +25,7 @@ import {
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 
-const Services = () => {
-  const services = [
+export const services = [
     {
       icon: Wind,
       title: "Wind Energy Projects",
@@ -28,11 +33,7 @@ const Services = () => {
         "Wind power is a proven and powerful way to generate large-scale renewable energy. Capable of producing substantial electricity, wind energy has emerged as a reliable solution for powering industries, businesses, and communities.",
       image: windImg,
       path: "/services/wind-energy",
-      highlights: [
-        "Large-scale renewable energy",
-        "BOOT & CAPS models",
-        "Proven technology",
-      ],
+      status: "completed",
     },
     {
       icon: Sun,
@@ -41,11 +42,7 @@ const Services = () => {
         "At JMK Groups, we deliver comprehensive solar energy solutions that power businesses, industries, and communities. As a leading EPC partner and project developer, we provide end-to-end services.",
       image: solarImg,
       path: "/services/solar-power",
-      highlights: [
-        "End-to-end EPC services",
-        "Site acquisition to O&M",
-        "Industrial & commercial",
-      ],
+      status: "ongoing",
     },
     {
       icon: Settings,
@@ -54,11 +51,7 @@ const Services = () => {
         "Comprehensive O&M services designed to ensure optimal performance, maximum uptime, and long-term reliability of your renewable energy assets.",
       image: operImg,
       path: "/services/operation-maintenance",
-      highlights: [
-        "Maximum uptime",
-        "Long-term reliability",
-        "Optimal performance",
-      ],
+      status: "ongoing",
     },
     {
       icon: Laptop,
@@ -67,11 +60,7 @@ const Services = () => {
         "We provide advanced technology solutions for energy management, monitoring, and data analytics, enabling businesses and utilities to optimize performance and improve efficiency.",
       image: itImg,
       path: "/services/it-solutions",
-      highlights: [
-        "Smart monitoring",
-        "Real-time tracking",
-        "Predictive analytics",
-      ],
+      status: "ongoing",
     },
     {
       icon: TrendingUp,
@@ -80,11 +69,7 @@ const Services = () => {
         "We offer comprehensive data analytics solutions to optimize energy generation, monitor system performance, and enable predictive maintenance for renewable energy assets.",
       image: dataImg,
       path: "/services/data-analysis",
-      highlights: [
-        "Performance optimization",
-        "Predictive maintenance",
-        "Actionable insights",
-      ],
+      status: "completed",
     },
     {
       icon: Heart,
@@ -93,12 +78,21 @@ const Services = () => {
         "At JMK Groups, we are committed to community development and sustainable practices that create lasting positive impact in the regions where we operate.",
       image: socialImg,
       path: "/services/social-responsibility",
-      highlights: [
-        "Community development",
-        "Education & healthcare",
-        "Economic growth",
-      ],
+      status: "completed",
     },
+  ];
+
+    const projectSites = [
+    "Muppandal",
+    "Avaraikulam",
+    "Surundai",
+    "Tenkasi",
+    "Devarkulam",
+    "Palladam",
+    "Kovilpatti",
+    "Kayathar",
+    "Theni",
+    "Udumalpet",
   ];
 
   const keyHighlights = [
@@ -108,181 +102,191 @@ const Services = () => {
     "Power Trading Experts",
   ];
 
+  const Services = () => {
+
   return (
     <div className="min-h-screen bg-background">
-      <section className="py-8 sm:py-10 lg:py-12 bg-gradient-secondary">
+      <section className="py-16 md:py-24 bg-muted/30 border-b border-muted-foreground/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-10">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-4 animate-fade-in">
-              Comprehensive Renewable Energy Solutions
-            </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Comprehensive renewable energy services designed to meet specific
-              client needs, leveraging decades of experience and cutting-edge
-              technology for reliable and efficient outcomes.
+          <div className="text-center mb-12">
+            <Badge variant="secondary" className="mb-4 px-5 py-2 text-base tracking-wide shadow">
+              What We Do
+            </Badge>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 drop-shadow-sm">
+              JMK Group Services
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Solar & Wind EPC/Turnkey Projects, Multi-brand O&M, Power Trading, and more—serving India's largest renewable corridor.
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             {keyHighlights.map((highlight, index) => (
-              <Badge
-                key={index}
-                variant="outline"
-                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 text-foreground border-primary/20 text-sm"
-              >
+              <span key={index} className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/80 to-secondary/80 text-black font-semibold rounded-full px-5 py-2 shadow-sm text-base">
+                <span className="inline-block w-2 h-2 rounded-full bg-white/70" />
                 {highlight}
-              </Badge>
+              </span>
             ))}
+          </div>
+
+          <div>
+            <Accordion type="multiple" className="w-full">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <AccordionItem key={service.title} value={`service-${index}`}>
+                    <AccordionTrigger className="text-left bg-white/80 hover:bg-white/90 border border-muted-foreground/10 rounded-lg px-4 py-3 mb-2 shadow-sm transition-all">
+                      <div className="flex items-center gap-3">
+                        <Icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                        <span className="text-lg md:text-xl font-bold">
+                          {service.title}
+                        </span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="grid gap-6 md:grid-cols-[1fr,300px] items-start bg-white/90 rounded-lg p-6 border border-muted-foreground/10 shadow">
+                        <div className="space-y-4">
+                          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                            {service.description}
+                          </p>
+                          <div>
+                            <Link
+                              to={service.path ?? "/services"}
+                              className="inline-flex items-center text-primary font-semibold hover:underline"
+                              aria-label={`Learn more about ${service.title}`}
+                            >
+                              Learn more
+                              <ArrowRight className="ml-2 w-4 h-4" />
+                            </Link>
+                          </div>
+                        </div>
+                        {service.image ? (
+                          <div className="rounded-md overflow-hidden border bg-muted/20">
+                            <img
+                              src={service.image}
+                              alt={service.title}
+                              className="h-40 w-full object-cover md:h-full"
+                              loading="lazy"
+                            />
+                          </div>
+                        ) : null}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+              {/* Completed Projects Accordion Item */}
+              <AccordionItem value="completed-projects">
+                <AccordionTrigger className="text-left bg-white/80 hover:bg-white/90 border border-muted-foreground/10 rounded-lg px-4 py-3 mb-2 shadow-sm transition-all">
+                  <div className="flex items-center gap-3">
+                    <Database className="h-6 w-6 text-primary" aria-hidden="true" />
+                    <span className="text-lg md:text-xl font-bold">Completed Projects</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="bg-white/90 rounded-lg p-6 border border-muted-foreground/10 shadow">
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
+                      A portfolio of our finished and delivered projects.
+                    </p>
+                    <Link
+                      to="/projects/completed"
+                      className="inline-flex items-center text-primary font-semibold hover:underline"
+                      aria-label="View all completed projects"
+                    >
+                      View all completed projects
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/10 to-muted/30 border-b border-muted-foreground/10">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Services
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive renewable energy solutions with detailed expertise
-              and proven track record
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 mb-8 sm:mb-12">
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
-              <CardContent className="p-4 sm:p-6">
-                <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
-                    <img
-                      src={windImg}
-                      alt="Wind Energy"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
-                    Wind Energy Projects
-                  </h3>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-foreground drop-shadow-sm tracking-tight">
+            Our Core Sectors
+          </h2>
+          <div className="grid md:grid-cols-2 gap-10 mb-8">
+            <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-4 mb-5">
+                <Wind className="h-9 w-9 text-primary" />
+                <h3 className="text-2xl font-bold">Wind Energy Sector</h3>
+              </div>
+              <div className="space-y-5 text-muted-foreground">
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Comprehensive Annual Operation and Maintenance Security Service Contracts</h4>
+                  <p>Developers conduct extensive wind resource assessments to identify suitable locations for wind farms. Areas with consistent and strong wind speeds are preferred.</p>
                 </div>
-                <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
-                  <p>
-                    Wind power is a proven and powerful way to generate
-                    large-scale renewable energy. Capable of producing
-                    substantial electricity, wind energy has emerged as a
-                    reliable solution for powering industries, businesses, and
-                    communities.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      <span>Large-scale renewable energy solutions</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      <span>BOOT & CAPS model implementations</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      <span>Proven technology with 20+ years experience</span>
-                    </div>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Turn Key Projects</h4>
+                  <p>With our expertise gained over 20 years, we will identify the right load and location, perform micrositing, land deals, transportation, foundation, balance of plants, and TANGEDCO powering.</p>
                 </div>
-                <Link
-                  to="/services/wind-energy"
-                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
-                >
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </CardContent>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Power Requirements</h4>
+                  <p>We offer consultation, mentorship, and government liaison services from power registering to catering to organizational power needs.</p>
+                </div>
+              </div>
             </Card>
-
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
-              <CardContent className="p-4 sm:p-6">
-                <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
-                    <img
-                      src={solarImg}
-                      alt="Solar Energy"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
-                    Solar Power Projects
-                  </h3>
+            <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-4 mb-5">
+                <Sun className="h-9 w-9 text-primary" />
+                <h3 className="text-2xl font-bold">Solar Energy Sector</h3>
+              </div>
+              <div className="space-y-5 text-muted-foreground">
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">JMK Group's dedicated wing for solar energy</h4>
+                  <p>We have end-to-end in-house capabilities across all aspects; we follow global best practices across products, process, technology, and safety.</p>
                 </div>
-                <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
-                  <p>
-                    At JMK Groups, we deliver comprehensive solar energy
-                    solutions that power businesses, industries, and
-                    communities. As a leading EPC partner and project developer,
-                    we provide end-to-end services.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      <span>End-to-end EPC services</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      <span>Site acquisition to O&M</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      <span>Industrial & commercial solutions</span>
-                    </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Customized Solar Projects</h4>
+                  <p>JMK is committed to developing customized solar projects for industrial, commercial, and institutional consumers. We offer each customer an innovative solution concept.</p>
+                </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">Professional Project Management</h4>
+                    <p>With an experienced project management team, we follow an exceptionally professional and systematic approach to all our solar projects.</p>
                   </div>
                 </div>
-                <Link
-                  to="/services/solar-power"
-                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
-                >
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
-              <CardContent className="p-4 sm:p-6">
-                <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
-                    <img
-                      src={operImg}
-                      alt="Operations & Maintenance"
-                      className="w-full h-full object-cover"
-                    />
+              </Card>
+  
+              <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                    <Settings className="h-9 w-9 text-primary" />
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                      Operations & Maintenance
+                    </h3>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
-                    Operations & Maintenance
-                  </h3>
-                </div>
-                <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
-                  <p>
-                    Comprehensive O&M services designed to ensure optimal
-                    performance, maximum uptime, and long-term reliability of
-                    your renewable energy assets with multi-brand expertise.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      <span>Maximum uptime guarantee</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      <span>Long-term reliability assurance</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      <span>Multi-brand service expertise</span>
+                  <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
+                    <p>
+                      Comprehensive O&M services designed to ensure optimal
+                      performance, maximum uptime, and long-term reliability of
+                      your renewable energy assets with multi-brand expertise.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                        <span>Maximum uptime guarantee</span>
+                      </div>
+                      <div className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                        <span>Long-term reliability assurance</span>
+                      </div>
+                      <div className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                        <span>Multi-brand service expertise</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <Link
-                  to="/services/operation-maintenance"
-                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
-                >
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </CardContent>
+                  <Link
+                    to="/services/operation-maintenance"
+                    className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
+                  >
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </CardContent>
             </Card>
 
             <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
@@ -420,6 +424,26 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <MapPin className="h-9 w-9 text-primary" />
+            <h2 className="text-3xl md:text-4xl font-extrabold text-center text-foreground drop-shadow-sm">Our Project Sites</h2>
+          </div>
+          <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto text-lg">
+            We have successfully executed projects across multiple locations in Tamil Nadu, India's renewable energy hub.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            {projectSites.map((site, index) => (
+              <Badge key={index} variant="outline" className="text-base px-5 py-2 bg-white/80 border border-muted-foreground/10 shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
+                {site}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };

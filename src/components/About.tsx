@@ -19,7 +19,12 @@ import visionImg from "@/assets/vision_about.png";
 import missionImg from "@/assets/mission_about.png";
 import founderPortrait from "@/assets/founder-portrait.jpg";
 import renewableEnergyLandscape from "@/assets/renewable-energy-landscape.jpg";
-import organizationalChart from "@/assets/organizational-chart.png";
+import operationsMaintenanceImg from "@/assets/operations-maintenance.jpg";
+import epcProjectsImg from "@/assets/epc-projects.jpg";
+import humanResourcesImg from "@/assets/human-resources.jpg";
+import solarPlantsImg from "@/assets/solar-plants.jpg";
+import powerTradingImg from "@/assets/power-trading.jpg";
+import corporateSolutionsImg from "@/assets/corporate-solutions.jpg";
 import coreInnovation from "@/assets/core-innovation.jpg";
 import coreIntegrity from "@/assets/core-integrity.jpg";
 import coreQuality from "@/assets/core-quality.jpg";
@@ -109,8 +114,26 @@ const About = () => {
           </p>
         </div>
 
-        <div className="mb-12 sm:mb-16">
-          <Card className="bg-gradient-card shadow-elegant border-0 overflow-hidden">
+        {/* Achievements Subsection */}
+        <div className="mb-16">
+          <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 shadow-lg border-0">
+            <CardContent className="p-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Achievements</h2>
+              <ul className="list-disc pl-6 space-y-2 text-lg text-muted-foreground">
+                <li>400MW+ Wind Farms Maintained</li>
+                <li>100MW+ Solar Projects Completed</li>
+                <li>100+ Clients Served Pan-India</li>
+                <li>100Cr+ Project Value Delivered</li>
+                <li>20+ Years of Industry Experience</li>
+                <li>Recognized EPC and O&M Partner of EWT Netherlands</li>
+                <li>Pan-India Power Trading Network</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="mb-16">
+          <Card className="bg-gradient-card shadow-elegant border-0 overflow-visible">
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="p-6 sm:p-8 lg:p-8">
@@ -374,34 +397,11 @@ const About = () => {
           </Card>
         </div>
 
-        <div className="mb-12 sm:mb-16">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-              Organizational Hierarchy
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our leadership structure designed for excellence in renewable
-              energy operations
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-gradient-card shadow-elegant border-0 overflow-hidden">
-              <CardContent className="p-4 sm:p-6">
-                <div className="flex justify-center">
-                  <img
-                    src={organizationalChart}
-                    alt="JMK Groups Organizational Hierarchy Chart"
-                    className="w-full max-w-2xl h-auto object-contain"
-                  />
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
-        <div className="mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-foreground mb-2 sm:mb-3">
+        <div className="mb-10">
+          <header className="text-4xl md:text-4xl font-bold text-left text-foreground mb-4">
+            Achievements
+          </header>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-3">
             Milestones We Reach
           </h2>
           <p className="text-base sm:text-lg text-center text-muted-foreground mb-6 sm:mb-8">

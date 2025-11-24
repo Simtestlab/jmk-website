@@ -161,3 +161,12 @@ All colors MUST be HSL.
 }
 
 /* Dots (manual nav) focus/active styles clamped to high contrast */
+
+/* Utility to hide native scrollbars while preserving scroll behavior */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

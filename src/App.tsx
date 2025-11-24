@@ -15,7 +15,11 @@ import ITSolutions from "./pages/services/ITSolutions";
 import DataAnalysis from "./pages/services/DataAnalysis";
 import SocialResponsibility from "./pages/services/SocialResponsibility";
 import Projects from "./pages/Projects";
+import OngoingProjects from "./pages/projects/Ongoing";
+import CompletedProjects from "./pages/projects/Completed";
+import SuccessStories from "./pages/SuccessStories";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 const ScrollToTop = () => {
@@ -52,7 +56,12 @@ const App = () => (
             element={<SocialResponsibility />}
           />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/ongoing" element={<OngoingProjects />} />
+          <Route path="/projects/completed" element={<CompletedProjects />} />
+          <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
