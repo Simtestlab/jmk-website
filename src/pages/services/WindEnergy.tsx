@@ -2,22 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Wind,
-  Zap,
-  Settings,
-  Users,
-  MapPin,
-  TrendingUp,
-  Award,
-  ArrowRight,
-  CheckCircle,
-  Target,
-  Building2,
-  Gauge,
-  Shield,
-} from "lucide-react";
+import { Settings, Users, Target, Building2 } from "lucide-react";
 
 const WindEnergy = () => {
   const capabilities = [
@@ -91,7 +76,6 @@ const WindEnergy = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
       <section className="py-20 bg-gradient-secondary relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -131,7 +115,6 @@ const WindEnergy = () => {
         </div>
       </section>
 
-      {/* Capabilities Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

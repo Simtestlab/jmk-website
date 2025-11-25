@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Zap, Sun, Wind, Target, Award, Users } from "lucide-react";
@@ -96,18 +95,15 @@ const CompanyOverview = () => {
               key={index}
               className="relative overflow-hidden bg-gradient-card shadow-card border-0 hover:shadow-glow transition-spring group h-64"
             >
-              {/* Background Image */}
               <div className="absolute inset-0">
                 <img
                   src={feature.image}
                   alt={feature.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                {/* Dark overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/85 group-hover:via-black/45 transition-all duration-300"></div>
               </div>
 
-              {/* Text content overlaid at bottom */}
               <CardContent className="absolute bottom-0 left-0 right-0 p-6 z-10">
                 <CardTitle className="text-xl font-bold text-white mb-3 group-hover:text-primary-light transition-colors duration-300">
                   {feature.title}

@@ -2,17 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  TrendingUp,
-  BarChart,
-  Brain,
-  Target,
-  ArrowRight,
-  CheckCircle,
-  Gauge,
-  Lightbulb,
-} from "lucide-react";
+import {  BarChart,  Brain,  Target,  Lightbulb } from "lucide-react";
 
 const DataAnalysis = () => {
   const capabilities = [

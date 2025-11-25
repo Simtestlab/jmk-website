@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Zap, Wind, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -11,8 +11,6 @@ const Hero = () => {
   const [index, setIndex] = useState(0);
 
   const INTERVAL_MS = 3000;
-  const TRANSITION_MS = 1000;
-
   useEffect(() => {
     const t = setInterval(() => {
       setIndex((i) => (i + 1) % images.length);

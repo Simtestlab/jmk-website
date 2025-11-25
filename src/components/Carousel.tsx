@@ -1,12 +1,12 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 type Props<T> = {
   items: T[];
   id: string;
   title?: string;
   renderCard: (item: T) => JSX.Element;
-  single?: boolean; // when true, show one card per view (full width)
-  controlsOutside?: boolean; // when true, place prev/next controls outside the carousel edges
+  single?: boolean; 
+  controlsOutside?: boolean; 
 };
 
 function Carousel<T>({ items, id, title, renderCard, single = false, controlsOutside = false }: Props<T>) {
@@ -27,10 +27,18 @@ function Carousel<T>({ items, id, title, renderCard, single = false, controlsOut
     cardWidthRef.current = first.getBoundingClientRect().width + gapRef.current;
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    const el = ref.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => measure());
+    ro.observe(el);
+    const onResize = () => measure();
+    window.addEventListener("resize", onResize);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", onResize);
+    };
   }, [measure]);
 
   const scrollTo = useCallback(
@@ -55,11 +63,21 @@ function Carousel<T>({ items, id, title, renderCard, single = false, controlsOut
     scrollTo(prevIdx);
   }, [index, items.length, scrollTo]);
 
+  const indexRef = useRef(index);
+  useEffect(() => {
+    indexRef.current = index;
+  }, [index]);
+
   useEffect(() => {
     if (paused) return;
-    const idt = window.setInterval(() => next(), 3500);
+    const idt = window.setInterval(() => {
+      const max = items.length - 1;
+      const cur = indexRef.current;
+      const nextIdx = cur >= max ? 0 : cur + 1;
+      scrollTo(nextIdx);
+    }, 3500);
     return () => window.clearInterval(idt);
-  }, [next, paused]);
+  }, [items.length, paused, scrollTo]);
 
   useEffect(() => {
     const el = ref.current;
@@ -80,7 +98,7 @@ function Carousel<T>({ items, id, title, renderCard, single = false, controlsOut
 
   const articleClass = single
     ? "snap-start flex-shrink-0 w-full"
-    : "snap-start flex-shrink-0 w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2";
+    : "snap-start flex-shrink-0 w-full md:w-[calc((100%_-_24px)/2+12px)] lg:w-[calc((100%_-_48px)/3+16px)]";
 
   const visibilityClasses = "transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100";
 
@@ -95,7 +113,7 @@ function Carousel<T>({ items, id, title, renderCard, single = false, controlsOut
     <div className="mb-8">
       {title && <h2 className="text-2xl font-semibold mb-4">{title}</h2>}
 
-      <div className="relative group overflow-visible">
+      <div className="relative group overflow-visible -mx-4 md:-mx-6 lg:-mx-8">
         <button
           aria-label="Previous"
           onClick={prev}
@@ -106,7 +124,7 @@ function Carousel<T>({ items, id, title, renderCard, single = false, controlsOut
 
         <div
           ref={ref}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar px-2"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar px-4 md:px-6 lg:px-8"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
           onFocus={() => setPaused(true)}

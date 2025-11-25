@@ -65,15 +65,12 @@ const SuccessStories = () => {
               </Card>
             )}
           />
-
-          {/* Single featured carousel (removed duplicated rows) */}
         </section>
 
         {related.length > 0 && (
           <section>
             <h2 className="text-2xl font-semibold mb-4">Projects</h2>
 
-            {/* Centered carousel (matches Blog layout) */}
             <section className="max-w-3xl mx-auto p-[5px]">
               <Carousel
                 id="related-projects"

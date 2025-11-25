@@ -1,30 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  Users,
-  Building,
-  Award,
-  Calendar,
-  CheckCircle,
-  Factory,
-  Wind,
-  Sun,
-  Network,
-  Briefcase,
-  Heart,
-  Sprout,
-  Globe,
-} from "lucide-react";
+import {Calendar, Network, Sprout, Globe } from "lucide-react";
 import visionImg from "@/assets/vision_about.png";
 import missionImg from "@/assets/mission_about.png";
 import founderPortrait from "@/assets/founder-portrait.jpg";
 import renewableEnergyLandscape from "@/assets/renewable-energy-landscape.jpg";
-import operationsMaintenanceImg from "@/assets/operations-maintenance.jpg";
-import epcProjectsImg from "@/assets/epc-projects.jpg";
-import humanResourcesImg from "@/assets/human-resources.jpg";
-import solarPlantsImg from "@/assets/solar-plants.jpg";
-import powerTradingImg from "@/assets/power-trading.jpg";
-import corporateSolutionsImg from "@/assets/corporate-solutions.jpg";
 import coreInnovation from "@/assets/core-innovation.jpg";
 import coreIntegrity from "@/assets/core-integrity.jpg";
 import coreQuality from "@/assets/core-quality.jpg";
@@ -114,7 +93,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Achievements Subsection */}
         <div className="mb-16">
           <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 shadow-lg border-0">
             <CardContent className="p-8">

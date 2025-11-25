@@ -1,10 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent } from "@/components/ui/card";
@@ -42,7 +38,6 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
       <section className="py-12 bg-gradient-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -52,11 +47,9 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Main Content */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <div className="bg-card rounded-2xl p-8 shadow-card border">
               <div className="mb-6">
                 <h2 className="text-2xl font-semibold mb-2 text-foreground">
@@ -67,7 +60,6 @@ const Contact = () => {
                 </p>
               </div>
 
-            {/* Address */}
             <Card className="overflow-hidden border-0 shadow-elegant bg-gradient-to-br from-card to-card/80">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
@@ -87,7 +79,6 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Contact Form */}
           <div className="xl:col-span-3">
             <Card className="border-0 shadow-elegant bg-gradient-to-br from-card to-card/80 overflow-hidden">
               <CardContent className="p-8">
@@ -142,7 +133,7 @@ const Contact = () => {
               </Card>
             </div>
   
-            {/* Business Development Contact */}
+            {/* 
             <div className="bg-gradient-secondary rounded-lg p-6 border">
               <h3 className="text-lg font-semibold mb-2 text-foreground">
                 Business Development
@@ -160,6 +151,7 @@ const Contact = () => {
                 </a>
               </div>
             </div>
+             */}
           </div>
         </div>
       </section>
