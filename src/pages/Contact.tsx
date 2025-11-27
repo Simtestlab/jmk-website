@@ -82,37 +82,6 @@ const Contact = () => {
           <div className="xl:col-span-3">
             <Card className="border-0 shadow-elegant bg-gradient-to-br from-card to-card/80 overflow-hidden">
               <CardContent className="p-8">
-                <div className="mb-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Send className="h-5 w-5 text-primary" />
-                    </div>
-                    <h2 className="text-2xl font-bold">Start Your Project</h2>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Ready to switch to renewable energy? Fill out the form and
-                    we'll get back to you within 24 hours.
-                  </p>
-                </div>
-
-                <div className="flex items-start space-x-4 p-4 bg-card rounded-lg border">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium mb-1 text-foreground">
-                      Visit Us
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      No.46, Ramar Koil St
-                      <br />
-                      Ramnagar, Coimbatore
-                      <br />
-                      Tamil Nadu 641009
-                    </p>
-                  </div>
-                </div>
-
                 <div className="flex items-start space-x-4 p-4 bg-card rounded-lg border">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 text-primary" />

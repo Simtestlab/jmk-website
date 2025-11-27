@@ -19,7 +19,7 @@ const Hero = () => {
   }, [images.length]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-16 pb-16 md:pt-0 md:pb-0">
       <div className="absolute inset-0 z-0 pointer-events-none">
         {images.map((src, i) => (
           <div

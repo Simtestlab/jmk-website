@@ -44,6 +44,7 @@ const SuccessStories = () => {
             id="ss-a"
             items={successStories}
             title="Featured Success Stories"
+            showControls={false}
             renderCard={(s: any) => (
               <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
                 {s.image && (
@@ -76,6 +77,7 @@ const SuccessStories = () => {
                 id="related-projects"
                 items={related}
                 controlsOutside
+                showControls={true}
                 renderCard={(p: any) => (
                   <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
                     {p.image && (
