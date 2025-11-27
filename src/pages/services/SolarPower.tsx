@@ -54,7 +54,7 @@ const SolarPower = () => {
                 Turning Sunlight into Possibilities
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                At JMK Groups, we deliver comprehensive solar energy solutions
+                At JMK Group, we deliver comprehensive solar energy solutions
                 that power businesses, industries, and communities. As a leading
                 EPC partner and project developer, we provide end-to-end
                 services from site acquisition, design, and installation to

@@ -59,7 +59,7 @@ const Hero = () => {
             <span className="block text-primary-glow">Clean Energy</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-            JMK Groups delivers comprehensive solar and wind energy solutions,
+            JMK Group delivers comprehensive solar and wind energy solutions,
             with over 500MW of clean energy projects and 20+ years of expertise
             in sustainable power generation.
           </p>

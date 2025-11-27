@@ -75,7 +75,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-4 sm:mb-6">
-            About JMK GROUPS
+            About JMK GROUP
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-6">
             Established in 2010, we've grown from a small seed to a trusted
@@ -210,7 +210,7 @@ const About = () => {
               <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
                 <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                   <p>
-                    At JMK Groups, we partner with leading technology providers
+                    At JMK Group, we partner with leading technology providers
                     and manufacturers to drive innovation in renewable energy
                     solutions. Our expertise spans product development, project
                     management, and commissioning, ensuring every solution we
@@ -270,7 +270,7 @@ const About = () => {
                 </p>
                 <p>
                   His commitment to sustainable energy solutions and ethical
-                  business practices has positioned JMK Groups as a reliable
+                  business practices has positioned JMK Group as a reliable
                   partner for renewable energy projects across the nation.
                 </p>
               </div>

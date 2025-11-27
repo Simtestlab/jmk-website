@@ -36,12 +36,12 @@ const Navigation = () => {
             <Link to="/" className="flex items-center space-x-3">
               <img
                 src={logo}
-                alt="JMK Groups"
+                alt="JMK Group"
                 className="w-14 h-14 rounded-lg object-contain"
               />
               <div className="hidden sm:block">
                 <div className="text-lg font-bold text-foreground">
-                  JMK GROUPS
+                  JMK GROUP
                 </div>
                 <div className="text-xs text-muted-foreground">
                   Energy Solutions

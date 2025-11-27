@@ -79,7 +79,7 @@ const CompanyOverview = () => {
         </div>
         <div className="max-w-4xl mx-auto text-center mb-20">
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-            JMK Groups is committed to delivering end-to-end renewable energy
+            JMK Group is committed to delivering end-to-end renewable energy
             solutions that drive long-term sustainability. With over two decades
             of proven expertise and a portfolio exceeding 500 MW of clean energy
             projects, we specialize in leveraging solar and wind power to

@@ -54,7 +54,7 @@ const SocialResponsibility = () => {
                 Building Communities, Powering Futures
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                At JMK Groups, we are committed to community development and
+                At JMK Group, we are committed to community development and
                 sustainable practices that create lasting positive impact. Our
                 initiatives focus on improving local infrastructure, supporting
                 education and healthcare, promoting renewable energy awareness,
