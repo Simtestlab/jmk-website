@@ -1,14 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  CheckCircle,
-  Building,
-  Zap,
-  Award,
-  Target,
-  MapPin,
-} from "lucide-react";
+import { CheckCircle,MapPin } from "lucide-react";
 import operationsMaintenanceImg from "@/assets/operations-maintenance.jpg";
 import epcProjectsImg from "@/assets/epc-projects.jpg";
 import humanResourcesImg from "@/assets/human-resources.jpg";

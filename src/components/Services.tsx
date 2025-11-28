@@ -39,7 +39,7 @@ export const services = [
       icon: Sun,
       title: "Solar Power Projects",
       description:
-        "At JMK Groups, we deliver comprehensive solar energy solutions that power businesses, industries, and communities. As a leading EPC partner and project developer, we provide end-to-end services.",
+        "At JMK Group, we deliver comprehensive solar energy solutions that power businesses, industries, and communities. As a leading EPC partner and project developer, we provide end-to-end services.",
       image: solarImg,
       path: "/services/solar-power",
       status: "ongoing",
@@ -75,7 +75,7 @@ export const services = [
       icon: Heart,
       title: "Social Responsibility",
       description:
-        "At JMK Groups, we are committed to community development and sustainable practices that create lasting positive impact in the regions where we operate.",
+        "At JMK Group, we are committed to community development and sustainable practices that create lasting positive impact in the regions where we operate.",
       image: socialImg,
       path: "/services/social-responsibility",
       status: "completed",
@@ -394,7 +394,7 @@ export const services = [
                 </div>
                 <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
                   <p>
-                    At JMK Groups, we are committed to community development and
+                    At JMK Group, we are committed to community development and
                     sustainable practices that create lasting positive impact in
                     the regions where we operate.
                   </p>

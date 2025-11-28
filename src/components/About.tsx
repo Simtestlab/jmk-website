@@ -1,30 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  Users,
-  Building,
-  Award,
-  Calendar,
-  CheckCircle,
-  Factory,
-  Wind,
-  Sun,
-  Network,
-  Briefcase,
-  Heart,
-  Sprout,
-  Globe,
-} from "lucide-react";
+import {Calendar, Network, Sprout, Globe } from "lucide-react";
 import visionImg from "@/assets/vision_about.png";
 import missionImg from "@/assets/mission_about.png";
 import founderPortrait from "@/assets/founder-portrait.jpg";
 import renewableEnergyLandscape from "@/assets/renewable-energy-landscape.jpg";
-import operationsMaintenanceImg from "@/assets/operations-maintenance.jpg";
-import epcProjectsImg from "@/assets/epc-projects.jpg";
-import humanResourcesImg from "@/assets/human-resources.jpg";
-import solarPlantsImg from "@/assets/solar-plants.jpg";
-import powerTradingImg from "@/assets/power-trading.jpg";
-import corporateSolutionsImg from "@/assets/corporate-solutions.jpg";
 import coreInnovation from "@/assets/core-innovation.jpg";
 import coreIntegrity from "@/assets/core-integrity.jpg";
 import coreQuality from "@/assets/core-quality.jpg";
@@ -96,7 +75,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-4 sm:mb-6">
-            About JMK GROUPS
+            About JMK GROUP
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-6">
             Established in 2010, we've grown from a small seed to a trusted
@@ -114,7 +93,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Achievements Subsection */}
         <div className="mb-16">
           <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 shadow-lg border-0">
             <CardContent className="p-8">
@@ -232,7 +210,7 @@ const About = () => {
               <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
                 <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                   <p>
-                    At JMK Groups, we partner with leading technology providers
+                    At JMK Group, we partner with leading technology providers
                     and manufacturers to drive innovation in renewable energy
                     solutions. Our expertise spans product development, project
                     management, and commissioning, ensuring every solution we
@@ -292,7 +270,7 @@ const About = () => {
                 </p>
                 <p>
                   His commitment to sustainable energy solutions and ethical
-                  business practices has positioned JMK Groups as a reliable
+                  business practices has positioned JMK Group as a reliable
                   partner for renewable energy projects across the nation.
                 </p>
               </div>

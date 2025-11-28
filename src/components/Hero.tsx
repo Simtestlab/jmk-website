@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Zap, Wind, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -9,10 +9,9 @@ import home3 from "@/assets/home_03.jpg";
 const Hero = () => {
   const images = [home1, home2, home3];
   const [index, setIndex] = useState(0);
+  const [loaded, setLoaded] = useState(false);
 
   const INTERVAL_MS = 3000;
-  const TRANSITION_MS = 1000;
-
   useEffect(() => {
     const t = setInterval(() => {
       setIndex((i) => (i + 1) % images.length);
@@ -20,8 +19,24 @@ const Hero = () => {
     return () => clearInterval(t);
   }, [images.length]);
 
+  // Preload images and clear a loading overlay once the first image is available.
+  useEffect(() => {
+    let mounted = true;
+    // Try to mark loaded as soon as any one image is ready so the hero doesn't stay blank.
+    for (const src of images) {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        if (mounted) setLoaded(true);
+      };
+    }
+    return () => {
+      mounted = false;
+    };
+  }, [images]);
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-16 pb-16 md:pt-0 md:pb-0">
       <div className="absolute inset-0 z-0 pointer-events-none">
         {images.map((src, i) => (
           <div
@@ -38,6 +53,7 @@ const Hero = () => {
             }}
           />
         ))}
+        {/* loading overlay removed - fade-in retained */}
       </div>
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 animate-pulse">
@@ -51,7 +67,12 @@ const Hero = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center">
+        <div
+          className={`text-center transform transition-all duration-700 ease-out ${
+            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+          aria-busy={!loaded}
+        >
           <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-8">
             <Zap className="w-4 h-4 mr-2" />
             India's Largest Wind Energy Corridor - Muppandal Belt
@@ -61,7 +82,7 @@ const Hero = () => {
             <span className="block text-primary-glow">Clean Energy</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-            JMK Groups delivers comprehensive solar and wind energy solutions,
+            JMK Group delivers comprehensive solar and wind energy solutions,
             with over 500MW of clean energy projects and 20+ years of expertise
             in sustainable power generation.
           </p>

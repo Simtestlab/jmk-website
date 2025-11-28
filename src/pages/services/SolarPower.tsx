@@ -2,18 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Sun,
-  Building2,
-  Target,
-  Award,
-  ArrowRight,
-  CheckCircle,
-  Zap,
-  Settings,
-  Users,
-} from "lucide-react";
+import {  Building2,  Target,  Award,  Settings } from "lucide-react";
 
 const SolarPower = () => {
   const capabilities = [
@@ -54,7 +43,6 @@ const SolarPower = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
       <section className="py-20 bg-gradient-secondary relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -66,7 +54,7 @@ const SolarPower = () => {
                 Turning Sunlight into Possibilities
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                At JMK Groups, we deliver comprehensive solar energy solutions
+                At JMK Group, we deliver comprehensive solar energy solutions
                 that power businesses, industries, and communities. As a leading
                 EPC partner and project developer, we provide end-to-end
                 services from site acquisition, design, and installation to
@@ -95,7 +83,6 @@ const SolarPower = () => {
         </div>
       </section>
 
-      {/* Capabilities Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

@@ -32,12 +32,12 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-6">
                 <img
                   src={logo}
-                  alt="JMK Groups Logo"
+                  alt="JMK Group Logo"
                   className="w-12 h-12 object-contain"
                 />
                 <div>
                   <h3 className="text-xl font-bold tracking-wide">
-                    JMK GROUPS
+                    JMK GROUP
                   </h3>
                   <p className="text-sm text-background/70 font-medium">
                     Energy Solutions
@@ -110,7 +110,7 @@ const Footer = () => {
         <div className="border-t border-background/10 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-background/60 text-sm">
-              © 2025 JMK Groups. All rights reserved.
+              © 2025 JMK Group. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link

@@ -7,7 +7,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-4">
-            About JMK GROUPS
+            About JMK GROUP
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Established in the year 2010 as a small seed, we grew gradually with
@@ -96,7 +96,7 @@ const AboutSection = () => {
                       Leadership
                     </h4>
                     <p className="text-muted-foreground text-sm">
-                      JMK groups, under the leadership J Muthukumar is thus a
+                      JMK group, under the leadership J Muthukumar is thus a
                       well-established trusted Organization in Green Energy
                       Sector.
                     </p>

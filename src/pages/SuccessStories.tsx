@@ -44,6 +44,7 @@ const SuccessStories = () => {
             id="ss-a"
             items={successStories}
             title="Featured Success Stories"
+            showControls={false}
             renderCard={(s: any) => (
               <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
                 {s.image && (
@@ -65,20 +66,18 @@ const SuccessStories = () => {
               </Card>
             )}
           />
-
-          {/* Single featured carousel (removed duplicated rows) */}
         </section>
 
         {related.length > 0 && (
           <section>
             <h2 className="text-2xl font-semibold mb-4">Projects</h2>
 
-            {/* Centered carousel (matches Blog layout) */}
             <section className="max-w-3xl mx-auto p-[5px]">
               <Carousel
                 id="related-projects"
                 items={related}
                 controlsOutside
+                showControls={true}
                 renderCard={(p: any) => (
                   <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
                     {p.image && (

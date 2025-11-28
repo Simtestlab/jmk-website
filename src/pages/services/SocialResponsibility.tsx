@@ -2,17 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Heart,
-  Users,
-  GraduationCap,
-  Building,
-  ArrowRight,
-  CheckCircle,
-  Globe,
-  Handshake,
-} from "lucide-react";
+import { GraduationCap, Building, Globe, Handshake } from "lucide-react";
 
 const SocialResponsibility = () => {
   const capabilities = [
@@ -53,7 +43,6 @@ const SocialResponsibility = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
       <section className="py-20 bg-gradient-secondary relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -65,7 +54,7 @@ const SocialResponsibility = () => {
                 Building Communities, Powering Futures
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                At JMK Groups, we are committed to community development and
+                At JMK Group, we are committed to community development and
                 sustainable practices that create lasting positive impact. Our
                 initiatives focus on improving local infrastructure, supporting
                 education and healthcare, promoting renewable energy awareness,
@@ -94,7 +83,6 @@ const SocialResponsibility = () => {
         </div>
       </section>
 
-      {/* Capabilities Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

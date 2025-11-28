@@ -1,10 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
 import landscape from "@/assets/renewable-energy-landscape.jpg";
-import { useRef, useEffect, useState } from "react";
 import Carousel from "@/components/Carousel";
 
 const Blog = () => {
