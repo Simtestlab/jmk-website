@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { MapPin, Clock, Send, Mail, Phone, Building2, Zap } from "lucide-react";
+import { MapPin, Clock, Mail, Phone, Building2, Zap } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent } from "@/components/ui/card";
