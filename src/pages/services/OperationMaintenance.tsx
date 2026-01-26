@@ -43,14 +43,14 @@ const OperationMaintenance = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <section className="py-20 bg-gradient-secondary relative overflow-hidden">
+      <section className="py-20 bg-gradient-secondary relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge variant="secondary" className="mb-4 px-4 py-2">
                 Operations & Maintenance
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-6 animate-fade-in">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-6 animate-fade-in leading-snug md:leading-snug lg:leading-snug whitespace-normal">
                 Ensuring Peak Performance & Reliability
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -64,10 +64,10 @@ const OperationMaintenance = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-glow rounded-full blur-3xl opacity-20"></div>
               <div className="relative bg-gradient-card rounded-2xl p-8 shadow-glow">
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {keyStats.map((stat, index) => (
                     <div key={index} className="text-center">
-                      <div className="text-3xl font-bold text-primary mb-1">
+                      <div className="text-2xl md:text-3xl font-bold text-primary mb-1 leading-tight">
                         {stat.number}
                       </div>
                       <div className="text-sm text-muted-foreground">

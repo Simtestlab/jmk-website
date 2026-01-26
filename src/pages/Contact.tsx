@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { MapPin, Clock, Send, Mail, Phone, Building2, Zap } from "lucide-react";
+import contactHero from "@/assets/wind_energy.jpg";
+import { Mail, Phone, Clock, Building2, MapPin, Zap } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,7 +16,7 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     toast({
       title: "Message Sent!",
@@ -30,7 +31,7 @@ const Contact = () => {
     });
   };
 
-  const handleInputChange = (field, value) => {
+  const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
@@ -41,7 +42,10 @@ const Contact = () => {
         "Malavia st, Ramar Koli St, Ramnagar,",
         "Coimbatore - 641009.",
       ],
-      image: "/src/assets/corporate-solutions.jpg",
+      coordinates: { lat: 11.0168, lng: 76.9558 },
+        mapUrl: `https://www.google.com/maps?q=${encodeURIComponent(
+          "JMK Energy Infra Pvt.Ltd, NO.46, Malavia st, Ramar Koli St, Ramnagar, Coimbatore - 641009"
+        )}`,
     },
     {
       lines: [
@@ -49,7 +53,10 @@ const Contact = () => {
         "Desigar Sannathi street, Keeraimandabam, Pillaiyarpalayam,",
         "Kanchipuram - 631501.",
       ],
-      image: "/src/assets/renewable-energy-landscape.jpg",
+      coordinates: { lat: 12.8342, lng: 79.7036 },
+        mapUrl: `https://www.google.com/maps?q=${encodeURIComponent(
+          "JMK Energy Infra Pvt.Ltd, NO.1112/D1, Desigar Sannathi street, Keeraimandabam, Pillaiyarpalayam, Kanchipuram - 631501"
+        )}`,
     },
     {
       lines: [
@@ -57,7 +64,8 @@ const Contact = () => {
         "Kumarapuram Village, Kannupothai Road, Aralvaimozhi,",
         "Tirunelveli - 627105.",
       ],
-      image: "/src/assets/wind_power.jpg",
+      coordinates: { lat: 8.1636, lng: 77.5275 },
+        mapUrl: `https://maps.app.goo.gl/Cm9wVToH66E7JybY7`,
     },
     {
       lines: [
@@ -65,11 +73,16 @@ const Contact = () => {
         "Kottakudi Village, Melur- Taluk,",
         "Madurai - 625106",
       ],
-      image: "/src/assets/solar-plants.jpg",
+      mapUrl: `https://www.google.com/maps?q=${encodeURIComponent(
+        "JMK Energy Infra Pvt.Ltd, Solar Plant, 111/2B, 113/3, Kottakudi Village, Melur- Taluk, Madurai - 625106"
+      )}`,
     },
     {
       lines: ["JMK ENERGY INFRA PVT LTD", "Gst 33AAGCJ0424N1ZN", "Coimbatore"],
-      image: "/src/assets/epc-projects.jpg",
+      coordinates: { lat: 11.0168, lng: 76.9558 },
+        mapUrl: `https://www.google.com/maps?q=${encodeURIComponent(
+          "JMK ENERGY INFRA PVT LTD Gst 33AAGCJ0424N1ZN Coimbatore"
+        )}`,
     },
   ];
 
@@ -79,15 +92,21 @@ const Contact = () => {
 
       <section className="relative py-20 bg-gradient-to-br from-primary/5 via-background to-primary/10 overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/5 bg-[size:20px_20px]" />
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-6 pointer-events-none"
+          style={{ backgroundImage: `url(${contactHero})` }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-black/40 dark:bg-black/60 pointer-events-none" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Zap className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Get in Touch</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
             Let's Power Your Future
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed" style={{ color: 'rgba(255,255,255,0.97)' }}>
             Ready to embrace renewable energy? Our experts are here to help you find the perfect sustainable solution for your needs.
           </p>
         </div>
@@ -95,7 +114,6 @@ const Contact = () => {
 
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Quick Contact Info */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             <Card className="group hover:shadow-xl transition-all duration-300 border-primary/20 hover:border-primary/40">
               <CardContent className="p-6 text-center">
@@ -135,7 +153,6 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Office Locations */}
           <div className="mb-12">
             <div className="text-center mb-10">
               <div className="inline-flex items-center gap-2 mb-4">
@@ -157,14 +174,25 @@ const Contact = () => {
                       <>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                           {main.map((addr, i) => (
-                            <div key={i} className="group rounded-2xl border border-primary/10 bg-card overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <a 
+                              key={i} 
+                              href={addr.mapUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group rounded-2xl border border-primary/10 bg-card overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                            >
                               <div className="relative h-40 overflow-hidden">
-                                <img 
-                                  src={addr.image} 
-                                  alt={`Office location ${i + 1}`}
-                                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                <iframe
+                                  src={
+                                    addr.coordinates
+                                      ? `https://www.google.com/maps?q=${addr.coordinates.lat},${addr.coordinates.lng}&z=15&output=embed`
+                                      : `${addr.mapUrl}&z=15&output=embed`
+                                  }
+                                  className="w-full h-full border-0 pointer-events-none"
+                                  loading="lazy"
+                                  title={`Map of office ${i + 1}`}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
                                 <div className="absolute top-3 right-3 p-2.5 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg group-hover:scale-110 transition-transform">
                                   <MapPin className="h-5 w-5 text-primary" />
                                 </div>
@@ -176,20 +204,30 @@ const Contact = () => {
                                   ))}
                                 </address>
                               </div>
-                            </div>
+                            </a>
                           ))}
                         </div>
 
                         {last && (
                           <div className="mt-6 flex justify-center">
-                            <div className="sm:w-1/2 group rounded-2xl border border-primary/10 bg-card overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                            <a 
+                              href={last.mapUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="sm:w-1/2 group rounded-2xl border border-primary/10 bg-card overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                            >
                               <div className="relative h-40 overflow-hidden">
-                                <img 
-                                  src={last.image} 
-                                  alt="GST Office"
-                                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                <iframe
+                                  src={
+                                    last.coordinates
+                                      ? `https://www.google.com/maps?q=${last.coordinates.lat},${last.coordinates.lng}&z=15&output=embed`
+                                      : `${last.mapUrl}&z=15&output=embed`
+                                  }
+                                  className="w-full h-full border-0 pointer-events-none"
+                                  loading="lazy"
+                                  title="Map of GST office"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
                                 <div className="absolute top-3 right-3 p-2.5 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg group-hover:scale-110 transition-transform">
                                   <MapPin className="h-5 w-5 text-primary" />
                                 </div>
@@ -201,7 +239,7 @@ const Contact = () => {
                                   ))}
                                 </address>
                               </div>
-                            </div>
+                            </a>
                           </div>
                         )}
                       </>
