@@ -104,8 +104,8 @@ const Contact = () => {
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Call Us</h3>
                 <p className="text-sm text-muted-foreground mb-3">Available Mon-Sat, 9 AM - 6 PM</p>
-                <a href="tel:+919597055889" className="text-primary hover:underline font-medium">
-                  +91 95970 55889
+                <a href="tel:+917340734036" className="text-primary hover:underline font-medium">
+                  +91 73407 34036
                 </a>
               </CardContent>
             </Card>
