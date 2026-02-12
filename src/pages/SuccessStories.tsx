@@ -55,11 +55,11 @@ const SuccessStories = () => {
                 <CardContent className="flex-1 flex flex-col justify-between">
                   <div>
                     <h3 className="text-lg font-semibold mb-2">{s.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4">{s.summary}</p>
+                    <p className="text-sm font-normal text-muted-foreground mb-4">{s.summary}</p>
                   </div>
                   <div className="flex items-center gap-2 mt-4">
                     {s.tags.map((t: string) => (
-                      <span key={t} className="text-xs px-2 py-1 bg-muted/50 rounded">{t}</span>
+                      <span key={t} className="text-xs font-medium px-2 py-1 bg-muted/50 rounded">{t}</span>
                     ))}
                   </div>
                 </CardContent>
@@ -70,7 +70,7 @@ const SuccessStories = () => {
 
         {related.length > 0 && (
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+            <h2 className="text-2xl font-bold mb-4">Projects</h2>
 
             <section className="max-w-3xl mx-auto p-[5px]">
               <Carousel
@@ -80,19 +80,21 @@ const SuccessStories = () => {
                 showControls={true}
                 renderCard={(p: any) => (
                   <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
-                    {p.image && (
-                      <div className="w-full h-36 overflow-hidden">
-                        <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
-                      </div>
-                    )}
-                    <CardContent className="flex-1">
-                      <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
-                      <p className="text-sm text-muted-foreground mb-3">{p.description}</p>
-                      <div className="flex justify-end">
-                        <Link to={p.path ?? "/projects/completed"} className="text-primary font-semibold">Details</Link>
-                      </div>
-                    </CardContent>
-                  </Card>
+                      {p.image && (
+                        <div className="w-full h-36 overflow-hidden">
+                          <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+                        </div>
+                      )}
+                      <CardContent className="flex-1 flex flex-col justify-between">
+                        <div>
+                          <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
+                          <p className="text-sm font-normal text-muted-foreground mb-3">{p.description}</p>
+                        </div>
+                        <div className="flex justify-end">
+                          <Link to={p.path ?? "/projects/completed"} className="text-primary font-medium">Details</Link>
+                        </div>
+                      </CardContent>
+                    </Card>
                 )}
               />
             </section>

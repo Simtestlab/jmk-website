@@ -20,6 +20,8 @@ import CompletedProjects from "./pages/projects/Completed";
 import SuccessStories from "./pages/SuccessStories";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import Careers from "./pages/Careers";
+import CandidateRegisterForm from "./pages/CandidateRegisterForm";
 
 const queryClient = new QueryClient();
 const ScrollToTop = () => {
@@ -60,6 +62,8 @@ const App = () => (
           <Route path="/projects/completed" element={<CompletedProjects />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/register" element={<CandidateRegisterForm />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

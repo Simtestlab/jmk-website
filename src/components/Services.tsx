@@ -128,7 +128,6 @@ export const services = [
               </span>
             ))}
           </div>
-
           <div>
             <Accordion type="multiple" className="w-full">
               {services.map((service, index) => {
@@ -203,62 +202,72 @@ export const services = [
           </div>
         </div>
       </section>
-
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/10 to-muted/30 border-b border-muted-foreground/10">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-foreground drop-shadow-sm tracking-tight">
             Our Core Sectors
           </h2>
-          <div className="grid md:grid-cols-2 gap-10 mb-8">
-            <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex items-center gap-4 mb-5">
-                <Wind className="h-9 w-9 text-primary" />
-                <h3 className="text-2xl font-bold">Wind Energy Sector</h3>
-              </div>
-              <div className="space-y-5 text-muted-foreground">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Comprehensive Annual Operation and Maintenance Security Service Contracts</h4>
-                  <p>Developers conduct extensive wind resource assessments to identify suitable locations for wind farms. Areas with consistent and strong wind speeds are preferred.</p>
+          <div className="grid md:grid-cols-2 gap-10 mb-8 auto-rows-fr">
+            <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow relative group h-full">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
+                    <img src={windImg} alt="Wind Energy" className="w-full h-full object-cover" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Wind Energy Sector</h3>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Turn Key Projects</h4>
-                  <p>With our expertise gained over 20 years, we will identify the right load and location, perform micrositing, land deals, transportation, foundation, balance of plants, and TANGEDCO powering.</p>
+                <div className="space-y-5 text-muted-foreground">
+                  <p>
+                    End-to-end wind energy solutions — site assessment, resource analysis, EPC delivery, grid interconnection, and long-term O&M to maximise asset performance and availability.
+                  </p>
+                  <ul className="list-inside list-none space-y-2 text-muted-foreground">
+                                    <li>• Site assessment & micrositing</li>
+                                    <li>• EPC, commissioning & lifecycle O&M</li>
+                                  </ul>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Power Requirements</h4>
-                  <p>We offer consultation, mentorship, and government liaison services from power registering to catering to organizational power needs.</p>
-                </div>
-              </div>
+              </CardContent>
+              <Link
+                to="/services/wind-energy"
+                className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
+              >
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Card>
-            <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex items-center gap-4 mb-5">
-                <Sun className="h-9 w-9 text-primary" />
-                <h3 className="text-2xl font-bold">Solar Energy Sector</h3>
-              </div>
-              <div className="space-y-5 text-muted-foreground">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">JMK Group's dedicated wing for solar energy</h4>
-                  <p>We have end-to-end in-house capabilities across all aspects; we follow global best practices across products, process, technology, and safety.</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Customized Solar Projects</h4>
-                  <p>JMK is committed to developing customized solar projects for industrial, commercial, and institutional consumers. We offer each customer an innovative solution concept.</p>
-                </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Professional Project Management</h4>
-                    <p>With an experienced project management team, we follow an exceptionally professional and systematic approach to all our solar projects.</p>
-                  </div>
-                </div>
-              </Card>
-  
-              <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
+              <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow relative group h-full">
                 <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                    <Settings className="h-9 w-9 text-primary" />
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground">
-                      Operations & Maintenance
-                    </h3>
+                  <div className="flex items-center gap-4 mb-5">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
+                      <img src={solarImg} alt="Solar Energy" className="w-full h-full object-cover" />
+                    </div>
+                    <h3 className="text-2xl font-bold">Solar Energy Sector</h3>
                   </div>
+                  <div className="space-y-5 text-muted-foreground">
+                    <p>
+                      Comprehensive solar EPC and project development — from feasibility and detailed design through procurement, BOS, commissioning, and grid interconnection.
+                    </p>
+                   <ul className="list-inside list-none space-y-2 text-muted-foreground">
+                                       <li>• Turnkey EPC & commissioning</li>
+                                       <li>• Performance guarantees & monitoring</li>
+                                     </ul>
+                  </div>
+                </CardContent>
+                <Link
+                  to="/services/solar-power"
+                  className="absolute bottom-4 right-4 inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-all duration-200 text-sm group-hover:translate-x-1 transform"
+                >
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Card>  
+              <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow relative group h-full">
+                <CardContent className="p-4 sm:p-6">
+                    <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
+                        <img src={operImg} alt="Operations & Maintenance" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                        Operations & Maintenance
+                      </h3>
+                    </div>
                   <div className="space-y-4 text-sm sm:text-base text-muted-foreground mb-4">
                     <p>
                       Comprehensive O&M services designed to ensure optimal
@@ -288,8 +297,7 @@ export const services = [
                   </Link>
                 </CardContent>
             </Card>
-
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
+            <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow relative group h-full">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
@@ -333,17 +341,16 @@ export const services = [
                 </Link>
               </CardContent>
             </Card>
-
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
+            <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow relative group h-full">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
-                    <img
-                      src={dataImg}
-                      alt="Data Analysis"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                      <img
+                        src={dataImg}
+                        alt="Data Analysis"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     Data Analysis
                   </h3>
@@ -378,16 +385,16 @@ export const services = [
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card shadow-card border-0 hover:shadow-glow transition spring relative group">
+            <Card className="p-8 bg-white/90 border border-muted-foreground/10 shadow-lg hover:shadow-xl transition-shadow relative group h-full">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
-                    <img
-                      src={socialImg}
-                      alt="Social Responsibility"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                      <img
+                        src={socialImg}
+                        alt="Social Responsibility"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     Social Responsibility
                   </h3>
